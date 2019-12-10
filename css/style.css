@@ -1,0 +1,89 @@
+*{margin:0;padding:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+body{background:#000;font-family:sans-serif;overflow-x: hidden;}
+.img-fluid{max-width:100%;height:auto;display:block}
+.w-100{width:100%}
+.w-75{width:75%}
+.w-50{width:50%}
+.w-25{width:25%}
+.d-flex{display:flex}
+.fullHeight{height:100%}
+.greenColor{color:#b0f831}
+header{position:fixed;width:100%;background:transparent;top:0;left:0;display:flex;justify-content:space-between;padding:1rem;align-items:center;z-index:2}
+.hamBurgerIcon{font-size:2rem;cursor:pointer}
+.logoImg{max-width: 175px;}
+main{height:100vh}
+.slideImage{flex:0 0 33.33%;max-width:33.33%;overflow: hidden;}
+.slideImage a{position:relative;width:100%;display:block;height:100%;text-decoration: none !important;}
+.slideImage a img{object-fit:fill;height:100%;width:100%;transition: 0.6s;transform: scale(1);}
+.slideImage a::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.25);z-index:1}
+.slideImage:nth-of-type(even) .contentDiv{top:10%}
+.slideImage:nth-of-type(odd) .contentDiv{bottom:10%}
+.slideImage a .contentDiv{transition:.6s;position:absolute;z-index:1;padding-left:1rem;padding-right:1rem}
+.slideImage a .contentDiv h1{color:#b0f831}
+.slideImage a .contentDiv p{color:#fff;height:20px;overflow:hidden;transition:.6s}
+.slideImage:hover a .contentDiv p{height:100px}
+.slideImage:hover a img{transform: scale(1.2);}
+
+/* menu */
+.menuDiv{position: fixed;top: 0;left: -100%;width: 100%;background: #000;z-index: 9;display: flex;justify-content: center;text-align: center;align-items: center;transition: 0.6s;bottom: 0;}
+.menuDiv ul{width: 100%;}
+.menuDiv ul li{font-size: 3rem;letter-spacing: 5px;text-transform: uppercase;margin-bottom: 2rem;list-style-type: none;position: relative;}
+.menuDiv ul li a{text-decoration: none;color: #b0f831;display: inline-block;position: relative;overflow: hidden;}
+.menuDiv ul li a::before{content: '';position: absolute;height: 5px;width: 100%;bottom: 0px;left: 0;background: #b0f831;z-index: 1;transition: 0.6s;}
+.menuDiv ul li a::after{content: '';position: absolute;height: 3px;width: 100%;bottom: 0px;left: -100%;background: pink;z-index: 1;transition: 0.6s;}
+.menuDiv ul li:hover a::before{left: 100%;}
+.menuDiv ul li:hover a::after{left: 0%;}
+.menuDiv ul li a:hover{color: pink;}
+.closeBtn{position: absolute;top: 7%;right: 2%;}
+.closeBtn span{display: block;height: 4px;background: #b0f831;width: 50px;position: relative;cursor: pointer;transition: 0.6s;}
+.closeBtn span:nth-child(1){transform: rotate(45deg);}
+.closeBtn span:nth-child(2){transform: rotate(-45deg);margin-top: -4px;}
+.closeBtn:hover span:nth-child(1){transform: rotate(-45deg);}
+.closeBtn:hover span:nth-child(2){transform: rotate(45deg);}
+
+/* Loader */
+.overLay{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: #000;z-index: 3;}
+.loader{position: fixed;z-index: 4;top: 50%;left: 50%;transform: translate(-50%);}
+.cenyaWrap{color: #FFF;font-size: 4rem;font-weight: 600;letter-spacing: 15px;}
+.cenyaWrap span{animation: loader;}
+.cenyaWrap span:nth-child(1){color: #b0f831;transition: 1s;animation: loader;}
+.cenyaWrap span:nth-child(2){color: #f84262;transition: 2s;animation: loader;}
+.cenyaWrap span:nth-child(3){color: #003580;transition: 3s;animation: loader;}
+.cenyaWrap span:nth-child(4){color: #dd0732;transition: 4s;animation: loader;}
+.cenyaWrap span:nth-child(5){color: #f2db4f;transition: 5s;animation: loader;}
+
+/* portfolio */
+.galleryWrapDiv{flex: 0 0 100%;}
+.galleryWrap{position: relative;flex: 0 0 20%;max-width: 20%;align-self: center;overflow: hidden;padding: 1rem;}
+.galleryWrap::after{content: '';}
+.galleryWrap:hover{}
+.galleryWrap img{}
+.galleryWrap p{color: #FFF;position: absolute;bottom: 2rem;right: 2rem;}
+.mt-3{margin-top: 3rem;}
+
+@keyframes loader{
+    0%{
+        opacity: 0;
+        transform: rotate(270deg);
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) { 
+    .sm-flex-wrap{flex-wrap: wrap;}
+    .slideImage{flex: 0 0 100%;width: 100%;max-width: 100%;margin-bottom: 2rem;}
+    .slideImage:nth-of-type(even) .contentDiv, .slideImage:nth-of-type(odd) .contentDiv{bottom:0%;position: relative;margin-top: 1rem;}
+    .slideImage a{height: auto;}
+}
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    
+}
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) { 
+    
+}
