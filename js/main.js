@@ -10,8 +10,6 @@ $(document).ready(function(){
     var slideWidth = $(".commonSlide").width();
     var slideContainerWidth = slideWidth*noSlides-ww;
 
-    var ww = window.innerWidth;
-
     function createHorizontal() {
         return new ScrollMagic.Scene({
         triggerElement: ".scrollWrapper",
@@ -21,7 +19,6 @@ $(document).ready(function(){
         .setPin(".scrollWrapper")
         .setTween(actionHorizontal)
         .addTo(controller);
-
     }
 
     if ($(window).width() < 767) {
@@ -52,7 +49,7 @@ $(document).ready(function(){
 
     const slideLength  = $('.slideImage');
     slideLength.map((index) =>
-        tl.fromTo(`.slideImage:nth-child(${index+1})`, 0.4, {height: "0%"}, {height: "100%", ease: Power2.easeInOut})
+        tl.fromTo(`.slideImage:nth-child(${index+1})`, 0.3, {height: "0%"}, {height: "100%", ease: Power2.easeInOut})
     )
 });
 
@@ -75,3 +72,5 @@ $(window).on('load', function(){
 
 // });
   
+
+

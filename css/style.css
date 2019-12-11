@@ -1,5 +1,30 @@
 *{margin:0;padding:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 body{background:#000;font-family:sans-serif;overflow-x: hidden;}
+@font-face{font-family:'APompadourBoldSample';src:url(../fonts/APompadourBoldSample.eot?#iefix) format("embedded-opentype"),url(../fonts/APompadourBoldSample.woff) format("woff"),url(../fonts/APompadourBoldSample.ttf) format("truetype"),url(../fonts/APompadourBoldSample.svg#APompadourBoldSample) format("svg");font-weight:400;font-style:normal}
+@font-face{font-family:'APompadourSample';src:url(../fonts/APompadourSample.eot?#iefix) format("embedded-opentype"),url(../fonts/APompadourSample.woff) format("woff"),url(../fonts/APompadourSample.ttf) format("truetype"),url(../fonts/APompadourSample.svg#APompadourSample) format("svg");font-weight:400;font-style:normal}
+@font-face{font-family:'CoolveticaCompressedRg-Regular';src:url(../fonts/CoolveticaCompressedRg-Regular.eot?#iefix) format("embedded-opentype"),url(../fonts/CoolveticaCompressedRg-Regular.woff) format("woff"),url(../fonts/CoolveticaCompressedRg-Regular.ttf) format("truetype"),url(../fonts/CoolveticaCompressedRg-Regular.svg#CoolveticaCompressedRg-Regular) format("svg");font-weight:400;font-style:normal}
+@font-face{font-family:'CoolveticaCondensedRg-Regular';src:url(../fonts/CoolveticaCondensedRg-Regular.eot?#iefix) format("embedded-opentype"),url(../fonts/CoolveticaCondensedRg-Regular.woff) format("woff"),url(../fonts/CoolveticaCondensedRg-Regular.ttf) format("truetype"),url(../fonts/CoolveticaCondensedRg-Regular.svg#CoolveticaCondensedRg-Regular) format("svg");font-weight:400;font-style:normal}
+@font-face{font-family:'CoolveticaCrammedRg-Regular';src:url(../fonts/CoolveticaCrammedRg-Regular.eot?#iefix) format("embedded-opentype"),url(../fonts/CoolveticaCrammedRg-Regular.woff) format("woff"),url(../fonts/CoolveticaCrammedRg-Regular.ttf) format("truetype"),url(../fonts/CoolveticaCrammedRg-Regular.svg#CoolveticaCrammedRg-Regular) format("svg");font-weight:400;font-style:normal}
+@font-face{font-family:'MarketDeco';src:url(../fonts/MarketDeco.eot?#iefix) format("embedded-opentype"),url(../fonts/MarketDeco.woff) format("woff"),url(../fonts/MarketDeco.ttf) format("truetype"),url(../fonts/MarketDeco.svg#MarketDeco) format("svg");font-weight:400;font-style:normal}
+@font-face{font-family:'TheBoldFont';src:url(../fonts/TheBoldFont.eot?#iefix) format("embedded-opentype"),url(../fonts/TheBoldFont.woff) format("woff"),url(../fonts/TheBoldFont.ttf) format("truetype"),url(../fonts/TheBoldFont.svg#TheBoldFont) format("svg");font-weight:400;font-style:normal}
+@font-face{font-family:'TheNextFont';src:url(../fonts/TheNextFont.eot?#iefix) format("embedded-opentype"),url(../fonts/TheNextFont.woff) format("woff"),url(../fonts/TheNextFont.ttf) format("truetype"),url(../fonts/TheNextFont.svg#TheNextFont) format("svg");font-weight:400;font-style:normal}
+@font-face{font-family:'ViceCitySans';src:url(../fonts/ViceCitySans.eot?#iefix) format("embedded-opentype"),url(../fonts/ViceCitySans.otf) format("opentype"),url(../fonts/ViceCitySans.woff) format("woff"),url(../fonts/ViceCitySans.ttf) format("truetype"),url(../fonts/ViceCitySans.svg#ViceCitySans) format("svg");font-weight:400;font-style:normal}
+@font-face {font-family: 'CoolveticaRg-Regular';src: url('../fonts/CoolveticaRg-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/CoolveticaRg-Regular.woff') format('woff'), url('../fonts/CoolveticaRg-Regular.ttf')  format('truetype'), url('../fonts/CoolveticaRg-Regular.svg#CoolveticaRg-Regular') format('svg');font-weight: normal;font-style: normal;}
+  
+/* font family classess */
+.pDBold{font-family: 'APompadourBoldSample';}
+.pDRg{font-family: 'APompadourSample';}
+.colveticaRg{font-family: 'CoolveticaRg-Regular';}
+.cCompRg{font-family: 'CoolveticaCompressedRg-Regular';}
+.cCondRg{font-family: 'CoolveticaCondensedRg-Regular';}
+.cCramRg{font-family: 'CoolveticaCrammedRg-Regular';}
+.marketDeco{font-family: 'MarketDeco';}
+.boldFont{font-family: 'TheBoldFont';}
+.nextFont{font-family: 'TheNextFont';}
+.viceCity{font-family: 'ViceCitySans';}
+
+
+/* common classes */
 .img-fluid{max-width:100%;height:auto;display:block}
 .w-100{width:100%}
 .w-75{width:75%}
@@ -8,26 +33,15 @@ body{background:#000;font-family:sans-serif;overflow-x: hidden;}
 .d-flex{display:flex}
 .fullHeight{height:100%}
 .greenColor{color:#b0f831}
-header{position:fixed;width:100%;background:transparent;top:0;left:0;display:flex;justify-content:space-between;padding:1rem;align-items:center;z-index:2}
-.hamBurgerIcon{font-size:2rem;cursor:pointer}
-.logoImg{max-width: 175px;}
+.purpleColor{color: #fc10f3;}
+.blueColor{color: #2ebfd0;}
+.greenColor{color: #2ae1a9;}
 main{height:100vh}
-.slideImage{flex:0 0 33.33%;max-width:33.33%;overflow: hidden;}
-.slideImage a{position:relative;width:100%;display:block;height:100%;text-decoration: none !important;}
-.slideImage a img{object-fit:fill;height:100%;width:100%;transition: 0.6s;transform: scale(1);}
-.slideImage a::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.25);z-index:1}
-.slideImage:nth-of-type(even) .contentDiv{top:10%}
-.slideImage:nth-of-type(odd) .contentDiv{bottom:10%}
-.slideImage a .contentDiv{transition:.6s;position:absolute;z-index:1;padding-left:1rem;padding-right:1rem}
-.slideImage a .contentDiv h1{color:#b0f831}
-.slideImage a .contentDiv p{color:#fff;height:20px;overflow:hidden;transition:.6s}
-.slideImage:hover a .contentDiv p{height:100px}
-.slideImage:hover a img{transform: scale(1.2);}
 
 /* menu */
 .menuDiv{position: fixed;top: 0;left: -100%;width: 100%;background: #000;z-index: 9;display: flex;justify-content: center;text-align: center;align-items: center;transition: 0.6s;bottom: 0;}
 .menuDiv ul{width: 100%;}
-.menuDiv ul li{font-size: 3rem;letter-spacing: 5px;text-transform: uppercase;margin-bottom: 2rem;list-style-type: none;position: relative;}
+.menuDiv ul li{font-size: 3rem;letter-spacing: 5px;text-transform: uppercase;margin-bottom: 2rem;list-style-type: none;position: relative;font-family: APompadourBoldSample;}
 .menuDiv ul li a{text-decoration: none;color: #b0f831;display: inline-block;position: relative;overflow: hidden;}
 .menuDiv ul li a::before{content: '';position: absolute;height: 5px;width: 100%;bottom: 0px;left: 0;background: #b0f831;z-index: 1;transition: 0.6s;}
 .menuDiv ul li a::after{content: '';position: absolute;height: 3px;width: 100%;bottom: 0px;left: -100%;background: pink;z-index: 1;transition: 0.6s;}
@@ -51,6 +65,26 @@ main{height:100vh}
 .cenyaWrap span:nth-child(3){color: #003580;transition: 3s;animation: loader;}
 .cenyaWrap span:nth-child(4){color: #dd0732;transition: 4s;animation: loader;}
 .cenyaWrap span:nth-child(5){color: #f2db4f;transition: 5s;animation: loader;}
+
+/* header bar */
+header{position:fixed;width:100%;background:transparent;top:0;left:0;display:flex;justify-content:space-between;padding:1rem;align-items:center;z-index:2}
+.hamBurgerIcon{font-size:2rem;cursor:pointer}
+.logoImg{max-width: 175px;}
+
+/* homepage  */
+.slideImage{flex:0 0 33.33%;max-width:33.33%;overflow: hidden;}
+.slideImage a{position:relative;width:100%;display:block;height:100%;text-decoration: none !important;}
+.slideImage a img{object-fit:fill;height:100%;width:100%;transition: 0.6s;transform: scale(1);}
+.slideImage a::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.25);z-index:1}
+.slideImage:nth-of-type(even) .contentDiv{bottom: 70%;}
+.slideImage:nth-of-type(odd) .contentDiv{bottom:20%}
+.slideImage a .contentDiv{transition:.6s;position:absolute;z-index:1;padding-left:1rem;padding-right:1rem;font-family: 'CoolveticaRg-Regular';}
+.slideImage a .contentDiv h1{letter-spacing: 3px;font-size: 3rem;}
+.slideImage a .contentDiv p{color:#fff;overflow:hidden;transition:.6s;font-size: 1.5rem;height:35px}
+.slideImage:hover a .contentDiv p{height:90px}
+.slideImage:hover a img{transform: scale(1.2);}
+
+
 
 /* portfolio */
 .galleryWrapDiv{flex: 0 0 100%;}
