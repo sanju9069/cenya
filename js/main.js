@@ -31,8 +31,8 @@ $(document).ready(function(){
     }
     
     $(".hamBurgerIcon").click(function(){
-        tl.fromTo('.menuDiv', 0.5, {height: "0%", left : "-100%"}, {height: "100%",left : "0%", ease: Power2.easeInOut})
-        .fromTo('.menuDiv ul li:nth-child(1)', 1.5, { opacity:'0', x: -750}, { opacity:'1', x: 0, ease: Power2.easeInOut}, '-=0.5')
+        tl.fromTo('.menuDiv', 0, {height: "0%", left : "-100%"}, {height: "100%",left : "0%", ease: Power2.easeInOut})
+        .fromTo('.menuDiv ul li:nth-child(1)', 1.5, { opacity:'0', x: -750}, { opacity:'1', x: 0, ease: Power2.easeInOut}, '-=0')
         .fromTo('.menuDiv ul li:nth-child(2)', 2, { opacity:'0', x: -750}, { opacity:'1', x: 0, ease: Power2.easeInOut}, '-=1.5')
         .fromTo('.menuDiv ul li:nth-child(3)', 2.5, { opacity:'0', x: -750}, { opacity:'1', x: 0, ease: Power2.easeInOut}, '-=2')
         .fromTo('.closeBtn', 2, {opacity: "0"}, {opacity: "1", ease: Power2.easeInOut}, "-=2")
