@@ -9,6 +9,13 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+    <div class="socialIcon">
+        <ul>
+            <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
     <div class="menuDiv">
         <div class="closeBtn">
             <span></span>
@@ -37,12 +44,13 @@
                 <i class="fa fa-bars" aria-hidden="true"></i>
             </div>
         </header>
-        <main class="w-100 mt-95 d-flex contactUsMain">
-            <div class="padding">
-                <h1 class="commonHeader">Contact Us</h1>
-                <form class="w-100 formWrap commonSlide">
+        <main class="w-100 d-flex contactUsMain scrollWrapper sm-flex-wrap">
+            <div class="padding slideContainer w-100">
+                
+                <form class="w-100 formWrap sm-flex-wrap ">
                     <!-- <h2>Services</h2> -->
-                    <div class="selectBoxesWrap w-100">
+                    <div class="selectBoxesWrap w-100 commonSlide">
+                        <h1 class="commonHeader w-100" style="text-align: left;">SERVICES</h1>
                         <div class="display-inline">
                             <label class="container">Written Content
                                 <input type="checkbox" checked="checked">
@@ -92,32 +100,35 @@
                             </label>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Name" name="name" id="name"/>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Email" name="email" id="email"/>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Mobile Number" name="mobileNum" id="mobileNum"/>
-                    </div>
-                    <div class="form-group w-100 flex-1">
-                        <textarea name="message" id=""rows="3">Your Message</textarea>
-                    </div>
-                    <div class="d-flex" style="justify-content: center;width: 100%;">
-                        <button type="submit" class="submitBtn">Submit</button>
+                    <div class="commonSlide flex-1 contactFieldWrap">
+                        <h1 class="commonHeader w-100">Reach Out to Us</h1>
+                        <div class="form-group">
+                            <input type="text" placeholder="Name" name="name" id="name"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" name="email" id="email"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Mobile Number" name="mobileNum" id="mobileNum"/>
+                        </div>
+                        <div class="form-group w-100 flex-1">
+                            <textarea name="message" id=""rows="3">Your Message</textarea>
+                        </div>
+                        <div class="d-flex" style="justify-content: center;width: 100%;">
+                            <button type="submit" class="submitBtn">Submit</button>
+                        </div>
                     </div>
                     
                 </form>
                 
             </div>
+            <div class="emailCallWrap">
+                <p><a href="#">Email: info@cenyainc.con</a></p>
+                <p><a href="#">Call: +91 1234567890</a></p>
+            </div>
         </main>
         <footer>
             <p>&copy; Copyright Cenya 2019</p>
-            <ul>
-                <li><a href="#">Email: info@cenyainc.con</a></li>
-                <li><a href="#">Call: +91 1234567890</a></li>
-            </ul>
         </footer>
     </div>
 

@@ -31,7 +31,7 @@ $(document).ready(function(){
     }
     
     $(".hamBurgerIcon").click(function(){
-        tl.fromTo('.menuDiv', 0, {height: "0%", left : "-100%"}, {height: "100%",left : "0%", ease: Power2.easeInOut})
+        tl.fromTo('.menuDiv', 0, {left : "-100%"}, {left : "0%", ease: Power2.easeInOut})
         .fromTo('.menuDiv ul li:nth-child(1)', 1.5, { opacity:'0', x: -750}, { opacity:'1', x: 0, ease: Power2.easeInOut}, '-=0')
         .fromTo('.menuDiv ul li:nth-child(2)', 2, { opacity:'0', x: -750}, { opacity:'1', x: 0, ease: Power2.easeInOut}, '-=1.5')
         .fromTo('.menuDiv ul li:nth-child(3)', 2.5, { opacity:'0', x: -750}, { opacity:'1', x: 0, ease: Power2.easeInOut}, '-=2')
@@ -39,11 +39,11 @@ $(document).ready(function(){
     });
     $('.closeBtn').click(function(){
         tl
-        .fromTo('.menuDiv ul li:nth-child(1)', 0, { opacity:'1', x: 0}, { opacity:'0', x: -750, ease: Power2.easeInOut})
-        .fromTo('.menuDiv ul li:nth-child(2)', 0.5, { opacity:'1', x: 0}, { opacity:'0', x: -750, ease: Power2.easeInOut}, '-=0')
-        .fromTo('.menuDiv ul li:nth-child(3)', 1, { opacity:'1', x: 0}, { opacity:'0', x: -750, ease: Power2.easeInOut}, '-=0.5')
+        .fromTo('.menuDiv ul li:nth-child(1)', 0, { opacity:'1', x: 0}, { opacity:'0', x: 750, ease: Power2.easeInOut})
+        .fromTo('.menuDiv ul li:nth-child(2)', 0.5, { opacity:'1', x: 0}, { opacity:'0', x: 750, ease: Power2.easeInOut}, '-=0')
+        .fromTo('.menuDiv ul li:nth-child(3)', 1, { opacity:'1', x: 0}, { opacity:'0', x: 750, ease: Power2.easeInOut}, '-=0.5')
         .fromTo('.closeBtn', 0, {opacity: "1"}, {opacity: "0", ease: Power2.easeInOut}, "-=1")
-        .fromTo('.menuDiv', 0.5, {height: "100%", left : "0%"}, {height: "0%",left : "-100%", ease: Power2.easeInOut}, "-=1")
+        .fromTo('.menuDiv', 0.5, { left : "0%"}, {left : "100%", ease: Power2.easeInOut}, "-=1")
         
     });
 
