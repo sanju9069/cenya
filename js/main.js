@@ -4,7 +4,7 @@ $(document).ready(function(){
     var title = document.querySelector('.title');
 
     var image = document.getElementsByTagName('img')[0];
-    var aquarelle = new Aquarelle(image, '../images/logo-loader.png', {
+    var aquarelle = new Aquarelle(image, '../../images/logo-loader.png', {
         autoplay: true,
         loop: true
     });
