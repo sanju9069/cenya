@@ -17,18 +17,68 @@ $(document).ready(function(){
         duration: slideContainerWidth
         })
         .setPin(".scrollWrapper")
-        .setTween(actionHorizontal)
+        .setTween(new TimelineMax().to(".slideContainer", 1, {x: -slideContainerWidth}))
         .addTo(controller);
     }
+
+    const scene = new ScrollMagic.Scene({
+        triggerElement: ".scrollWrapper",
+        triggerHook: "onLeave",
+        duration: slideContainerWidth
+    }).addTo(controller);
+
+
+    let lengthofSlide = 0;
+
+    scene.on("update", e =>{
+        lengthofSlide = e.scrollPos
+    })
 
     if ($(window).width() < 767) {
         console.log('Mobile Device');
     }
     else {
-        var actionHorizontal = new TimelineMax()
-        .to(".slideContainer", 1, {x: -slideContainerWidth})
-        var horizontal = createHorizontal(); 
+        createHorizontal(); 
     }
+
+    function arrowNext(arrow){
+        lengthofSlide += slideWidth
+        if(lengthofSlide-slideWidth >= slideContainerWidth){
+           // $(arrow).hide()
+            tl.to(".slideContainer", 1, {x: 0})
+        }
+        else{
+            tl.to(".slideContainer", 1, {x: -lengthofSlide})
+        }
+    }
+    // function arrowPrev(arrow){
+        
+    // }
+
+
+    let vid = document.getElementById("aboutVideo"); 
+
+    $("#next").click(function(){
+        arrowNext(this)
+    });
+    $("#prev").click(function(){
+        arrowPrev(this)
+    });
+
+    $(".playButton").html(`<span><i class="fa fa-play" id="playButton" aria-hidden="true"></i></span>`)
+    
+    $("body").on("click", "#playButton", function(){
+        vid.play();
+        $(".playButton").html(`<span><i class="fa fa-pause" id="pauseButton" aria-hidden="true"></i></span>`)
+        $('.aboutHeader').fadeOut()
+    });
+    
+
+    $("body").on("click", "#pauseButton", function(){
+        vid.pause();
+        $(".playButton").html(`<span><i class="fa fa-play" id="playButton" aria-hidden="true"></i></span>`)
+    });
+
     
     $(".hamBurgerIcon").click(function(){
         tl.fromTo('.menuDiv', 0, {left : "-100%"}, {left : "0%", ease: Power2.easeInOut})
