@@ -32,6 +32,7 @@ $(document).ready(function(){
     var controller = new ScrollMagic.Controller();
     var tl = new TimelineMax();
 
+    
     var ww = window.innerWidth;
 
     var noSlides = $(".commonSlide").length;
