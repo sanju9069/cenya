@@ -1,4 +1,32 @@
 $(document).ready(function(){
+    // loader script
+    var fade = document.querySelector('.fade');
+    var title = document.querySelector('.title');
+
+    var image = document.getElementsByTagName('img')[0];
+    var aquarelle = new Aquarelle(image, '../images/logo-loader.png', {
+        autoplay: true,
+        loop: true
+    });
+
+    aquarelle.addEventListener('created', function() {
+        var canvas = this.getCanvas();
+        canvas.removeAttribute('style');
+        image.parentNode.insertBefore(canvas, image.nextSibling);
+        image.parentNode.removeChild(image);
+    });
+
+    aquarelle.addEventListener('changed', function(event) {
+        fade.style.opacity = this.transitionInRange(1, 1, 7183, 7933);
+        var canvas = this.getCanvas();
+        canvas.style.webkitFilter = 'blur(' + this.transitionInRange(0, 24, 3000) + 'px)';
+        canvas.style.webkitTransform = canvas.style.transform = 'translate(-50%, -50%) scale(' + this.transitionInRange(.75, 1) + ')';
+        
+        //title.style.opacity = this.transitionInRange(0, 1, 0, 2016);
+        //title.style.webkitTransform = title.style.transform = 'scale(' + this.transitionInRange(.8, 1, 0, 5883) + ')';
+
+    });
+        
     //TweenLite.defaultEase = Linear.easeNone;
 
     var controller = new ScrollMagic.Controller();
@@ -104,9 +132,13 @@ $(document).ready(function(){
 });
 
 
+
 $(window).on('load', function(){ 
-    $('.overLay').hide();
-    $('.loader').hide();
+    setTimeout(function(){ 
+        $('.loader').hide();
+        $('.loader').remove()
+    },1000);
+
 });
 
 

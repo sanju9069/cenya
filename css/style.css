@@ -57,14 +57,18 @@ main{height:100vh}
 
 /* Loader */
 .overLay{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: #000;z-index: 3;}
-.loader{position: fixed;z-index: 4;top: 50%;left: 50%;transform: translate(-50%);}
-.cenyaWrap{color: #FFF;font-size: 4rem;font-weight: 600;letter-spacing: 15px;}
+/* .loader{position: fixed;z-index: 4;top: 50%;left: 50%;transform: translate(-50%);} */
+/* .cenyaWrap{color: #FFF;font-size: 4rem;font-weight: 600;letter-spacing: 15px;}
 .cenyaWrap span{animation: loader;}
 .cenyaWrap span:nth-child(1){color: #b0f831;transition: 1s;animation: loader;}
 .cenyaWrap span:nth-child(2){color: #f84262;transition: 2s;animation: loader;}
 .cenyaWrap span:nth-child(3){color: #003580;transition: 3s;animation: loader;}
 .cenyaWrap span:nth-child(4){color: #dd0732;transition: 4s;animation: loader;}
-.cenyaWrap span:nth-child(5){color: #f2db4f;transition: 5s;animation: loader;}
+.cenyaWrap span:nth-child(5){color: #f2db4f;transition: 5s;animation: loader;} */
+.loader{height: 100vh;width: 100%;background: #000;position: fixed;top: 0;left: 0;z-index: 9;}
+.loader img{display:none}
+.loader canvas{left:50%;max-height:100%;max-width:100%;position:absolute;top:50%;background:#000}
+.loader .title{background-image:url(../images/logo-loader.png);background-position:center;background-repeat:no-repeat;background-size:contain;height:38px;left:50%;margin-left:-124px;margin-top:-19px;position:absolute;top:50%;width:248px}
 
 /* header bar */
 header{position:fixed;width:100%;background:transparent;top:0;left:0;display:flex;justify-content:space-between;padding:1rem 2rem 1rem 1rem;align-items:center;z-index:2;height: 95px;}
