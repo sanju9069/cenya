@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cenya</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/swiper.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -39,63 +40,76 @@
                 <i class="fa fa-bars" aria-hidden="true"></i>
             </div>
         </header>
-        <main class="w-100 scrollWrapper">
-            <div class="d-flex fullHeight sm-flex-wrap slideContainer" style="flex-wrap: wrap;align-items: center;">
-                <div class="galleryWrapDiv mt-3">
-                    <div class="d-flex">
-                        <div class="galleryWrap commonSlide">
-                            <img src="images/images.jpg" alt="slide-1" class="img-fluid"/>
-                            <p>Brooklyn Live</p>
-                        </div>
-                        <div class="galleryWrap commonSlide">
-                            <img src="images/images.jpg" alt="slide-1" class="img-fluid"/>
-                            <p>Brooklyn Live</p>
-                        </div>
-                        <div class="galleryWrap commonSlide">
-                            <img src="images/images.jpg" alt="slide-1" class="img-fluid"/>
-                            <p>Brooklyn Live</p>
-                        </div>
-                        <div class="galleryWrap commonSlide">
-                            <img src="images/images.jpg" alt="slide-1" class="img-fluid"/>
-                            <p>Brooklyn Live</p>
-                        </div>
-                        <div class="galleryWrap commonSlide">
-                            <img src="images/images.jpg" alt="slide-1" class="img-fluid"/>
-                            <p>Brooklyn Live</p>
-                        </div>
-                        <div class="galleryWrap commonSlide">
-                            <img src="images/images.jpg" alt="slide-1" class="img-fluid"/>
-                            <p>Brooklyn Live</p>
-                        </div>
+        <main class="w-100">
+            <div class="galleryWrap">
+                <div class="swiper-container gallery-top">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="images/nature-1.jpg" alt="img1"/>
                     </div>
+                    <div class="swiper-slide">
+                      <img src="images/nature-2.jpg" alt="img1"/>
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/nature-3.jpg" alt="img1"/>
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/nature-4.jpg" alt="img1"/>
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/nature-5.jpg" alt="img1"/>
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/nature-6.jpg" alt="img1"/>
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/nature-7.jpg" alt="img1"/>
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/nature-8.jpg" alt="img1"/>
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/nature-9.jpg" alt="img1"/>
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/nature-10.jpg" alt="img1"/>
+                    </div>
+                  </div>
+                  
                 </div>
-                <div class="galleryWrapDiv">
-                    <div class="d-flex">
-                        <div class="galleryWrap">
-                            <img src="images/images.jpg" alt="slide-1" class="img-fluid"/>
-                            <p>Brooklyn Live</p>
+                <div class="swiper-container gallery-thumbs" dir="rtl">
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                          <img src="images/nature-1.jpg" alt="img1"/>
                         </div>
-                        <div class="galleryWrap">
-                            <img src="images/images.jpg" alt="slide-1" class="img-fluid"/>
-                            <p>Brooklyn Live</p>
+                        <div class="swiper-slide">
+                          <img src="images/nature-2.jpg" alt="img1"/>
                         </div>
-                        <div class="galleryWrap">
-                            <img src="images/images.jpg" alt="slide-1" class="img-fluid"/>
-                            <p>Brooklyn Live</p>
+                        <div class="swiper-slide">
+                          <img src="images/nature-3.jpg" alt="img1"/>
                         </div>
-                        <div class="galleryWrap">
-                            <img src="images/images.jpg" alt="slide-1" class="img-fluid"/>
-                            <p>Brooklyn Live</p>
+                        <div class="swiper-slide">
+                          <img src="images/nature-4.jpg" alt="img1"/>
                         </div>
-                        <div class="galleryWrap">
-                            <img src="images/images.jpg" alt="slide-1" class="img-fluid"/>
-                            <p>Brooklyn Live</p>
+                        <div class="swiper-slide">
+                          <img src="images/nature-5.jpg" alt="img1"/>
                         </div>
-                        <div class="galleryWrap">
-                            <img src="images/images.jpg" alt="slide-1" class="img-fluid"/>
-                            <p>Brooklyn Live</p>
+                        <div class="swiper-slide">
+                          <img src="images/nature-6.jpg" alt="img1"/>
                         </div>
-                    </div>
+                        <div class="swiper-slide">
+                          <img src="images/nature-7.jpg" alt="img1"/>
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="images/nature-8.jpg" alt="img1"/>
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="images/nature-9.jpg" alt="img1"/>
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="images/nature-10.jpg" alt="img1"/>
+                        </div>
+                  </div>
                 </div>
             </div>
         </main>
@@ -117,7 +131,30 @@
     <script src="js/AquarellePass.js"></script>
     <script src="js/ShaderPass.js"></script>
     <script src="js/CopyShader.js"></script>   
+    <script src="js/swiper.min.js"></script>   
     <script src="js/main.js"></script>
+    <script>
+        var galleryThumbs = new Swiper('.gallery-thumbs', {
+            spaceBetween: 30,
+            slidesPerView: 4,
+            loop: true,
+            freeMode: true,
+            centeredSlides: true,
+            mousewheel: true,
+        });
+        var galleryTop = new Swiper('.gallery-top', {
+            spaceBetween: 30,
+            slidesPerView: 4,
+            loop: true,
+            freeMode: true,
+            mousewheel: true,
+            keyboard: {
+            enabled: true,
+            }
+        });
+        galleryTop.controller.control = galleryThumbs;
+        galleryThumbs.controller.control = galleryTop;
+    </script>
     
   </body>
 </html>

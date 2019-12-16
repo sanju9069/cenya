@@ -4,7 +4,7 @@ $(document).ready(function(){
     var title = document.querySelector('.title');
 
     var image = document.getElementsByTagName('img')[0];
-    var aquarelle = new Aquarelle(image, '//sanju9069.github.io/cenya/images/logo-loader.png', {
+    var aquarelle = new Aquarelle(image, '../images/logo-loader.png', {
         autoplay: true,
         loop: true
     });
@@ -32,7 +32,6 @@ $(document).ready(function(){
     var controller = new ScrollMagic.Controller();
     var tl = new TimelineMax();
 
-    
     var ww = window.innerWidth;
 
     var noSlides = $(".commonSlide").length;
@@ -138,7 +137,7 @@ $(window).on('load', function(){
     setTimeout(function(){ 
         $('.loader').hide();
         $('.loader').remove()
-    },1000);
+    },0);
 
 });
 
