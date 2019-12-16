@@ -1,10 +1,10 @@
 $(document).ready(function(){
     // loader script
     var fade = document.querySelector('.fade');
-    var title = document.querySelector('.title');
+    //var title = document.querySelector('.title');
 
     var image = document.getElementsByTagName('img')[0];
-    var aquarelle = new Aquarelle(image, '../images/logo-loader.png', {
+    var aquarelle = new Aquarelle(image, '../images/nature-1.jpg', {
         autoplay: true,
         loop: true
     });
@@ -108,6 +108,11 @@ $(document).ready(function(){
     });
 
     
+    tl.fromTo('nav', 0, {width : "0%"}, {width : "0%", ease: Power2.easeInOut})
+    // $(".hamBurgerIcon").hover(function(){
+    //     tl.fromTo('nav', 0, {width : "0%", opacity: "0"}, {width : "70%",opacity: "1", ease: Power2.easeInOut})
+    // });
+    
     $(".hamBurgerIcon").click(function(){
         tl.fromTo('.menuDiv', 0, {left : "-100%"}, {left : "0%", ease: Power2.easeInOut})
         .fromTo('.menuDiv ul li:nth-child(1)', 1.5, { opacity:'0', x: -750}, { opacity:'1', x: 0, ease: Power2.easeInOut}, '-=0')
@@ -137,7 +142,9 @@ $(window).on('load', function(){
     setTimeout(function(){ 
         $('.loader').hide();
         $('.loader').remove()
-    },0);
+
+     }, 1000);
+   
 
 });
 

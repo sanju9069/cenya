@@ -187,6 +187,17 @@ footer ul>li>a{font-size: .7rem;color: #b0f831;text-decoration: none;} */
 .aboutUsContent h2{font-family: 'APompadourBoldSample';color: #2175a4;font-size: 2rem;}
 .aboutUsContent p{font-family: 'APompadourSample';line-height: 1.4;font-style: italic;margin-top: 1rem;}
 main video:hover~.aboutUsContent{opacity: 1;}
+
+/* navbar menu */
+nav{font-family: 'TheBoldFont';overflow: hidden;}
+nav ul{display: flex;justify-content: space-between;}
+nav ul li{display: inline-block;font-size: 1.7rem;}
+nav ul li a{color: #b1f932;text-decoration: none;}
+nav ul li a:hover{color: #e234bc;}
+.activeNav a{position: relative;color: #e234bc;}
+.activeNav a::before{content: '';box-shadow: 1px 1px 20px #FFF;}
+
+
 @keyframes loader{
     0%{
         opacity: 0;
