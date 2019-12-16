@@ -139,11 +139,11 @@ $(document).ready(function(){
 
 
 $(window).on('load', function(){ 
-    setTimeout(function(){ 
+   // setTimeout(function(){ 
         $('.loader').hide();
         $('.loader').remove()
 
-     }, 1000);
+    // }, 1000);
    
 
 });
