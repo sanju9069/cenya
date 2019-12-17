@@ -6,7 +6,7 @@ $(window).on('load', function(){
     //var title = document.querySelector('.title');
 
     var image = document.getElementsByTagName('img')[0];
-    var aquarelle = new Aquarelle(image, 'sanju9069.github.io/cenya/images/nature-1.jpg', {
+    var aquarelle = new Aquarelle(image, '//sanju9069.github.io/cenya/images/nature-1.jpg', {
         autoplay: true,
         loop: true
     });
