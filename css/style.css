@@ -39,7 +39,17 @@ body{background:#0d0c12;font-family:sans-serif;overflow-x: hidden;overflow-y: ov
 main{height:100vh}
 
 /* menu bar*/
-.menuDiv{position: fixed;top: 0;left: -100%;width: 100%;background: #000;z-index: 9;display: flex;justify-content: center;text-align: center;align-items: center;transition: 0.6s;bottom: 0;}
+.menuDiv{position: fixed;top: 0;width: 100%;z-index: 9;display: flex;justify-content: center;text-align: center;align-items: center;transition: 0.6s;bottom: 0;height: 100%;display: none;}
+.singleMenu{width: 33.33%;flex: 0 0 33.33%;height: 100%;overflow: hidden;}
+.singleMenu div{height: 100%;align-items: center;display: flex;justify-content: center;font-size: 3rem;letter-spacing: 5px;text-transform: uppercase;font-family: APompadourBoldSample;background: #000;position: relative;width: 100%;}
+.singleMenu a{text-decoration: none;color: #b0f831;display: inline-block;position: relative;overflow: hidden;}
+.singleMenu a::before{content: '';position: absolute;height: 5px;width: 100%;bottom: 0px;left: 0;background: #b0f831;z-index: 1;transition: 0.6s;}
+.singleMenu a::after{content: '';position: absolute;height: 3px;width: 100%;bottom: 0px;left: -100%;background: pink;z-index: 1;transition: 0.6s;}
+.singleMenu:hover a::before{left: 100%;}
+.singleMenu:hover a::after{left: 0%;}
+.singleMenu a:hover{color: pink;}
+
+
 .menuDiv ul{width: 100%;}
 .menuDiv ul li{font-size: 3rem;letter-spacing: 5px;text-transform: uppercase;margin-bottom: 2rem;list-style-type: none;position: relative;font-family: APompadourBoldSample;}
 .menuDiv ul li a{text-decoration: none;color: #b0f831;display: inline-block;position: relative;overflow: hidden;}
@@ -48,12 +58,12 @@ main{height:100vh}
 .menuDiv ul li:hover a::before{left: 100%;}
 .menuDiv ul li:hover a::after{left: 0%;}
 .menuDiv ul li a:hover{color: pink;}
-.closeBtn{position: absolute;top: 7%;right: 2%;z-index: 9;}
+.closeBtn{position: absolute;top: 7%;right: 2%;z-index: 9;display: none;}
 .closeBtn span{display: block;height: 4px;background: #b0f831;width: 50px;position: relative;cursor: pointer;transition: 0.6s;}
 .closeBtn span:nth-child(1){transform: rotate(45deg);}
 .closeBtn span:nth-child(2){transform: rotate(-45deg);margin-top: -4px;}
-.closeBtn:hover span:nth-child(1){transform: rotate(-45deg);}
-.closeBtn:hover span:nth-child(2){transform: rotate(45deg);}
+/* .closeBtn:hover span:nth-child(1){transform: rotate(-45deg);}
+.closeBtn:hover span:nth-child(2){transform: rotate(45deg);} */
 
 /* Loader */
 .overLay{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: #000;z-index: 3;}
@@ -121,18 +131,20 @@ header{position:fixed;width:100%;background:transparent;top:0;left:0;display:fle
 .contactFieldWrap{display: flex;flex-wrap: wrap;padding-right: 3rem;}
 .display-inline .container{display:block;position:relative;padding-left:35px;margin-bottom:12px;cursor:pointer;font-size:16px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;font-family: 'APompadourBoldSample';}
 .display-inline .container input{position:absolute;opacity:0;cursor:pointer;height:0;width:0}
-.checkmark{position:absolute;top:0;left:0;height:25px;width:25px;background-color:#fc10f3}
+.checkmark{position:absolute;top:0;left:0;height:20px;width:20px;background-color:#c7c7c7;border-radius: 5px;}
 .display-inline .container:hover input ~ .checkmark{background-color:#b0f831}
 .display-inline .container input:checked ~ .checkmark{background-color:#b0f831}
 .checkmark:after{content:"";position:absolute;display:none}
 .display-inline .container input:checked ~ .checkmark:after{display:block}
-.display-inline .container input:checked ~ .container{color: green;}
-.display-inline .container .checkmark:after{left:9px;top:5px;width:5px;height:10px;border:solid #fff;border-width:0 3px 3px 0;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}
+.display-inline .container .checkmark:after{left:5px;top:2px;width:5px;height:12px;border:solid #000;border-width:0 3px 3px 0;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}
+.videoLabel{display: inline-block;background: #b1f933;color: #000;padding: 5px;font-size: 1.3rem;position: relative;top: -5px;}
+.display-inline .container input:checked ~ .labelLabel{color: #b1f933;}
+/* .labelLabel{color: #b1f933;} */
 .emailCallWrap{font-family: 'APompadourSample';position: fixed;bottom: 0px;width: 100%;background: #000;padding: 1.5rem;}
 .emailCallWrap p{padding-bottom: .5rem;}
 .emailCallWrap p a{text-decoration: none;color: #bbbbbb;font-size: 1.2rem;}
 .form-group{flex: 0 0 33.33%;max-width: 33.33%;font-family: 'APompadourBoldSample';padding: 1rem;}
-.form-group input, .form-group textarea{font-family: 'APompadourSample';width: 100%;padding: 1rem;font-size: 1.2rem;box-shadow: 0px 2px 10px #b0f831;border: none;outline: none;}
+.form-group input, .form-group textarea{font-family: 'APompadourSample';width: 100%;padding: 1rem;font-size: 1.2rem;box-shadow: 0px 1px 7px #afafaf;border: solid 2px rgba(175, 175, 175, 0.19);outline: none;font-style: italic;background: #d6d6d6;color: #686868;}
 .form-group textarea{resize: none;}
 .flex-1{max-width: 100%;flex: 0 0 100%;}
 .submitBtn{border: none;font-size: 2rem;padding: 0.2rem 1rem;background: transparent;color: #FFF;overflow: hidden;outline: none;position: relative;cursor: pointer;font-family: 'ViceCitySans';}
@@ -140,7 +152,6 @@ header{position:fixed;width:100%;background:transparent;top:0;left:0;display:fle
 .submitBtn::after{content: '';position: absolute;top: 100%;left: 0;width: 100%;height: 100%;background: #fc10f3;z-index: -1;transition: 0.3s;}
 .submitBtn:hover::before{top: -100%;}
 .submitBtn:hover::after{top: 0%;}
-
 /* blog page */
 .blogWrap{display: flex}
 .fullDIv{flex: 0 0 100%;max-width: 100%;position: relative;}
@@ -165,7 +176,7 @@ footer{position: fixed;bottom: 0;left: 0;width: 100%;display: flex;justify-conte
 footer p{font-size: .7rem;color: #ccc;}
 /* footer ul>li{list-style-type: none;display: inline-block;padding-left: 1rem;}
 footer ul>li>a{font-size: .7rem;color: #b0f831;text-decoration: none;} */
-.arrowsWrap{position: fixed;z-index: 5;bottom: 5%;color: #FFF;display: flex;width: 100%;justify-content: flex-end;padding: 1rem;}
+.arrowsWrap{position: fixed;z-index: 5;bottom: 1%;color: #FFF;display: flex;width: 100%;justify-content: flex-end;padding: 1rem;}
 .arrowsWrap span{background: rgba(0, 0, 0, 0.70);color: #b0f831;width: 45px;height: 45px;border-radius: 50%;display: block;vertical-align: middle;font-size: 1.8rem;text-align: center;padding-top: 7px;cursor: pointer;}
 .arrowsWrap span i{transition: 0.6s;transform: rotate(0deg);}
 .arrowsWrap span:hover{background: #b0f831;color: #000;}

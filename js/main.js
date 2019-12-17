@@ -1,32 +1,33 @@
-var fade = document.querySelector('.fade');
-//var title = document.querySelector('.title');
-
-var image = document.getElementsByTagName('img')[0];
-var aquarelle = new Aquarelle(image, 'sanju9069.github.io/cenya/images/nature-1.jpg', {
-    autoplay: true,
-    loop: true
-});
-
-aquarelle.addEventListener('created', function() {
-    var canvas = this.getCanvas();
-    canvas.removeAttribute('style');
-    image.parentNode.insertBefore(canvas, image.nextSibling);
-    image.parentNode.removeChild(image);
-});
-
-aquarelle.addEventListener('changed', function(event) {
-    fade.style.opacity = this.transitionInRange(1, 1, 7183, 7933);
-    var canvas = this.getCanvas();
-    canvas.style.webkitFilter = 'blur(' + this.transitionInRange(0, 24, 3000) + 'px)';
-    canvas.style.webkitTransform = canvas.style.transform = 'translate(-50%, -50%) scale(' + this.transitionInRange(.75, 1) + ')';
-    
-    //title.style.opacity = this.transitionInRange(0, 1, 0, 2016);
-    //title.style.webkitTransform = title.style.transform = 'scale(' + this.transitionInRange(.8, 1, 0, 5883) + ')';
-
-});
 
 $(window).on('load', function(){ 
+    // loader script
 //  setTimeout(function(){ 
+    var fade = document.querySelector('.fade');
+    //var title = document.querySelector('.title');
+
+    var image = document.getElementsByTagName('img')[0];
+    var aquarelle = new Aquarelle(image, 'sanju9069.github.io/cenya/images/nature-1.jpg', {
+        autoplay: true,
+        loop: true
+    });
+
+    aquarelle.addEventListener('created', function() {
+        var canvas = this.getCanvas();
+        canvas.removeAttribute('style');
+        image.parentNode.insertBefore(canvas, image.nextSibling);
+        image.parentNode.removeChild(image);
+    });
+
+    aquarelle.addEventListener('changed', function(event) {
+        fade.style.opacity = this.transitionInRange(1, 1, 7183, 7933);
+        var canvas = this.getCanvas();
+        canvas.style.webkitFilter = 'blur(' + this.transitionInRange(0, 24, 3000) + 'px)';
+        canvas.style.webkitTransform = canvas.style.transform = 'translate(-50%, -50%) scale(' + this.transitionInRange(.75, 1) + ')';
+        
+        //title.style.opacity = this.transitionInRange(0, 1, 0, 2016);
+        //title.style.webkitTransform = title.style.transform = 'scale(' + this.transitionInRange(.8, 1, 0, 5883) + ')';
+
+    });
         $('.loader').hide();
         $('.loader').remove()
 
@@ -34,9 +35,7 @@ $(window).on('load', function(){
 });
 
 $(document).ready(function(){
-    // loader script
-    
-        
+       
     //TweenLite.defaultEase = Linear.easeNone;
 
     var controller = new ScrollMagic.Controller();
@@ -44,9 +43,15 @@ $(document).ready(function(){
 
     var ww = window.innerWidth;
 
-    var noSlides = $(".commonSlide").length;
-    var slideWidth = $(".commonSlide").width();
-    var slideContainerWidth = slideWidth*noSlides-ww;
+    var noSlides, slideWidth, slideContainerWidth;
+    noSlides = $(".commonSlide").length;
+    let num = 0;
+
+    $(".commonSlide").each(function() {
+        slideWidth = $(this).outerWidth();
+        num += slideWidth
+    });
+    var slideContainerWidth = num-ww;
 
     function createHorizontal() {
         return new ScrollMagic.Scene({
@@ -82,7 +87,6 @@ $(document).ready(function(){
     function arrowNext(arrow){
         lengthofSlide += slideWidth
         if(lengthofSlide-slideWidth >= slideContainerWidth){
-           // $(arrow).hide()
             tl.to(".slideContainer", 1, {x: 0})
         }
         else{
@@ -122,21 +126,22 @@ $(document).ready(function(){
     // $(".hamBurgerIcon").hover(function(){
     //     tl.fromTo('nav', 0, {width : "0%", opacity: "0"}, {width : "70%",opacity: "1", ease: Power2.easeInOut})
     // });
-    
+
+
     $(".hamBurgerIcon").click(function(){
-        tl.fromTo('.menuDiv', 0, {left : "-100%"}, {left : "0%", ease: Power2.easeInOut})
-        .fromTo('.menuDiv ul li:nth-child(1)', 1.5, { opacity:'0', x: -750}, { opacity:'1', x: 0, ease: Power2.easeInOut}, '-=0')
-        .fromTo('.menuDiv ul li:nth-child(2)', 2, { opacity:'0', x: -750}, { opacity:'1', x: 0, ease: Power2.easeInOut}, '-=1.5')
-        .fromTo('.menuDiv ul li:nth-child(3)', 2.5, { opacity:'0', x: -750}, { opacity:'1', x: 0, ease: Power2.easeInOut}, '-=2')
-        .fromTo('.closeBtn', 2, {opacity: "0"}, {opacity: "1", ease: Power2.easeInOut}, "-=2")
+        tl.fromTo('.menuDiv', 0, {  display: 'none'}, { display: 'flex'})
+        .fromTo($('.singleMenu1>div'), 0.3, {left: "-100%", width:"0"}, { left: "0%", width:"100%"},'-=0')
+        .fromTo($('.singleMenu2>div'), 0.6, {left: "-100%", width:"0"}, { left: "0%", width:"100%"},'-=0.3')
+        .fromTo($('.singleMenu3>div'), 0.9, {left: "-100%", width:"0"}, { left: "0%", width:"100%"},'-=0.6')
+        .fromTo($('.closeBtn'), 2, {display: "none"}, { display: "block"})
     });
     $('.closeBtn').click(function(){
         tl
-        .fromTo('.menuDiv ul li:nth-child(1)', 0, { opacity:'1', x: 0}, { opacity:'0', x: 750, ease: Power2.easeInOut})
-        .fromTo('.menuDiv ul li:nth-child(2)', 0.5, { opacity:'1', x: 0}, { opacity:'0', x: 750, ease: Power2.easeInOut}, '-=0')
-        .fromTo('.menuDiv ul li:nth-child(3)', 1, { opacity:'1', x: 0}, { opacity:'0', x: 750, ease: Power2.easeInOut}, '-=0.5')
-        .fromTo('.closeBtn', 0, {opacity: "1"}, {opacity: "0", ease: Power2.easeInOut}, "-=1")
-        .fromTo('.menuDiv', 0.5, { left : "0%"}, {left : "100%", ease: Power2.easeInOut}, "-=1")
+        .fromTo($('.singleMenu1>div'), 0.3, {left: "0%", width:"100%"}, { left: "100%", width:"0%"},'-=0')
+        .fromTo($('.singleMenu2>div'), 0.6, {left: "0%", width:"100%"}, { left: "100%", width:"0%"},'-=0.3')
+        .fromTo($('.singleMenu3>div'), 0.9, {left: "0%", width:"100%"}, { left: "100%", width:"0%"},'-=0.6')
+        .fromTo($('.closeBtn'), 0, {display: "block"}, { display: "none"}, '-=0.9')
+        .fromTo('.menuDiv', 1.5, {  display: 'flex'}, { display: 'none'}, "-=1.2")
         
     });
 
