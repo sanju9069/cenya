@@ -50,8 +50,8 @@ $(document).ready(function(){
     }
 
     function arrowNext(arrow){
-        lengthofSlide += slideWidth
-        if(lengthofSlide-slideWidth >= slideContainerWidth){
+        lengthofSlide += 400
+        if(lengthofSlide >= slideContainerWidth){
             tl.to(".slideContainer", 1, {x: 0})
         }
         else{
@@ -86,12 +86,10 @@ $(document).ready(function(){
         $(".playButton").html(`<span><i class="fa fa-play" id="playButton" aria-hidden="true"></i></span>`)
     });
 
-    
-    tl.fromTo('nav', 0, {width : "0%"}, {width : "0%", ease: Power2.easeInOut})
-    // $(".hamBurgerIcon").hover(function(){
-    //     tl.fromTo('nav', 0, {width : "0%", opacity: "0"}, {width : "70%",opacity: "1", ease: Power2.easeInOut})
-    // });
-
+    $(".hamBurgerIcon").mouseenter(function(){
+        tl.fromTo('nav', 0, {display : "none"}, {display : "block", ease: Power2.easeInOut})
+        .fromTo('nav ul', 1, {right : "-100%", opacity: "0"}, {right : "0%",opacity: "1"},"-=0")
+    });   
 
     $(".hamBurgerIcon").click(function(){
         tl.fromTo('.menuDiv', 0, {  display: 'none'}, { display: 'flex'})

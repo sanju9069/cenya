@@ -7,20 +7,15 @@
     <title>Cenya</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/swiper.min.css" rel="stylesheet">
+    <link href="css/lightbox.css" rel="stylesheet" >
     <link href="css/style.css" rel="stylesheet">
     <script src="js/jquery.min.js"></script>
-    <script src="js/three.js"></script>
-    <script src="js/Aquarelle.js"></script>
-    <script src="js/EffectComposer.js"></script>
-    <script src="js/ClearPass.js"></script>
-    <script src="js/AquarellePass.js"></script>
-    <script src="js/ShaderPass.js"></script>
-    <script src="js/CopyShader.js"></script>   
     <script src="js/swiper.min.js"></script>  
     <script src="js/TweenMax.min.js"></script>
     <script src="js/ScrollMagic.min.js"></script>
     <script src="js/animation.gsap.js"></script>
     <script src="js/debug.addIndicators.min.js"></script>
+    <script src="js/lightbox.js"></script>
     <script src="js/main.js"></script>
     
   </head>
@@ -70,8 +65,8 @@
               <ul>
                 <li><a href="index.html">Home</a></li>
                 <li class="activeNav"><a href="about-us.html">About</a></li>
-                <li><a href="about-us.html">Portfolio</a></li>
-                <li><a href="about-us.html">Contact</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
               </ul>
             </nav>
             <div class="hamBurgerIcon greenColor">
@@ -83,71 +78,70 @@
                 <div class="swiper-container gallery-top">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <img src="images/nature-1.jpg" alt="img1"/>
+                        <a href="images/nature-1.jpg" data-lightbox="example-set" data-title="My caption"><img class="example-image" src="images/nature-1.jpg" alt=""/></a>
                     </div>
                     <div class="swiper-slide">
-                      <img src="images/nature-2.jpg" alt="img1"/>
+                      <a class="example-image-link" href="images/nature-2.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/nature-2.jpg" alt=""/></a>
                     </div>
                     <div class="swiper-slide">
-                      <img src="images/nature-3.jpg" alt="img1"/>
+                        <a class="example-image-link" href="images/nature-3.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/nature-3.jpg" alt=""/></a>
                     </div>
                     <div class="swiper-slide">
-                      <img src="images/nature-4.jpg" alt="img1"/>
+                      <a class="example-image-link" href="images/nature-4.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/nature-4.jpg" alt=""/></a>
                     </div>
                     <div class="swiper-slide">
-                      <img src="images/nature-5.jpg" alt="img1"/>
+                      <a class="example-image-link" href="images/nature-5.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/nature-5.jpg" alt=""/></a>
                     </div>
                     <div class="swiper-slide">
-                      <img src="images/nature-6.jpg" alt="img1"/>
+                        <a class="example-image-link" href="images/nature-6.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/nature-6.jpg" alt=""/></a>
                     </div>
                     <div class="swiper-slide">
-                      <img src="images/nature-7.jpg" alt="img1"/>
+                        <a class="example-image-link" href="images/nature-7.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/nature-7.jpg" alt=""/></a>
                     </div>
                     <div class="swiper-slide">
-                      <img src="images/nature-8.jpg" alt="img1"/>
+                        <a class="example-image-link" href="images/nature-8.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/nature-8.jpg" alt=""/></a>
                     </div>
                     <div class="swiper-slide">
-                      <img src="images/nature-9.jpg" alt="img1"/>
+                        <a class="example-image-link" href="images/nature-9.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/nature-9.jpg" alt=""/></a>
                     </div>
                     <div class="swiper-slide">
-                      <img src="images/nature-10.jpg" alt="img1"/>
+                        <a class="example-image-link" href="images/nature-10.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/nature-10.jpg" alt=""/></a>
                     </div>
                   </div>
-                  
                 </div>
                 <div class="swiper-container gallery-thumbs" dir="rtl">
-                  <div class="swiper-wrapper">
+                    <div class="swiper-wrapper">
                       <div class="swiper-slide">
-                          <img src="images/nature-1.jpg" alt="img1"/>
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="images/nature-2.jpg" alt="img1"/>
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="images/nature-3.jpg" alt="img1"/>
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="images/nature-4.jpg" alt="img1"/>
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="images/nature-5.jpg" alt="img1"/>
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="images/nature-6.jpg" alt="img1"/>
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="images/nature-7.jpg" alt="img1"/>
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="images/nature-8.jpg" alt="img1"/>
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="images/nature-9.jpg" alt="img1"/>
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="images/nature-10.jpg" alt="img1"/>
-                        </div>
-                  </div>
+                          <a href="images/nature-1.jpg" data-lightbox="example-set" data-title="My caption"><img class="example-image" src="images/nature-1.jpg" alt=""/></a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a class="example-image-link" href="images/nature-2.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/nature-2.jpg" alt=""/></a>
+                      </div>
+                      <div class="swiper-slide">
+                          <a class="example-image-link" href="images/nature-3.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/nature-3.jpg" alt=""/></a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a class="example-image-link" href="images/nature-4.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/nature-4.jpg" alt=""/></a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a class="example-image-link" href="images/nature-5.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/nature-5.jpg" alt=""/></a>
+                      </div>
+                      <div class="swiper-slide">
+                          <a class="example-image-link" href="images/nature-6.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/nature-6.jpg" alt=""/></a>
+                      </div>
+                      <div class="swiper-slide">
+                          <a class="example-image-link" href="images/nature-7.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/nature-7.jpg" alt=""/></a>
+                      </div>
+                      <div class="swiper-slide">
+                          <a class="example-image-link" href="images/nature-8.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/nature-8.jpg" alt=""/></a>
+                      </div>
+                      <div class="swiper-slide">
+                          <a class="example-image-link" href="images/nature-9.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/nature-9.jpg" alt=""/></a>
+                      </div>
+                      <div class="swiper-slide">
+                          <a class="example-image-link" href="images/nature-10.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/nature-10.jpg" alt=""/></a>
+                      </div>
+                    </div>
                 </div>
             </div>
         </main>
@@ -180,6 +174,11 @@
         });
         galleryTop.controller.control = galleryThumbs;
         galleryThumbs.controller.control = galleryTop;
+        lightbox.option({
+          'resizeDuration': 100,
+          'wrapAround': false,
+          "showImageNumberLabel": false
+        })
     </script>
     
   </body>
