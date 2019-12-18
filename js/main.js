@@ -47,6 +47,11 @@ $(document).ready(function(){
     }
     else {
         createHorizontal(); 
+
+        $(".hamBurgerIcon").mouseenter(function(){
+            tl.fromTo('nav', 0, {display : "none"}, {display : "block", ease: Power2.easeInOut})
+            .fromTo('nav ul', 1, {right : "-100%", opacity: "0"}, {right : "0%",opacity: "1"},"-=0")
+        });   
     }
 
     function arrowNext(arrow){
@@ -86,10 +91,7 @@ $(document).ready(function(){
         $(".playButton").html(`<span><i class="fa fa-play" id="playButton" aria-hidden="true"></i></span>`)
     });
 
-    $(".hamBurgerIcon").mouseenter(function(){
-        tl.fromTo('nav', 0, {display : "none"}, {display : "block", ease: Power2.easeInOut})
-        .fromTo('nav ul', 1, {right : "-100%", opacity: "0"}, {right : "0%",opacity: "1"},"-=0")
-    });   
+    
 
     $(".hamBurgerIcon").click(function(){
         tl.fromTo('.menuDiv', 0, {  display: 'none'}, { display: 'flex'})
