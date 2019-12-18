@@ -253,6 +253,7 @@ nav ul li a:hover{color: #e234bc;}
     .menuDiv{flex-wrap: wrap;}
     .videoWrap{position: relative;height: 95vh;}
     .aboutUsContent{position: relative;padding: 1rem;}
+    .aboutHeader{top: 15%;}
     
 }
 /* Medium devices (tablets, 768px and up) */
