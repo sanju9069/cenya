@@ -52,6 +52,11 @@ $(document).ready(function(){
             tl.fromTo('nav', 0, {display : "none"}, {display : "block", ease: Power2.easeInOut})
             .fromTo('nav ul', 1, {right : "-100%", opacity: "0"}, {right : "0%",opacity: "1"},"-=0")
         });   
+       $("main").mouseenter(function(){
+            tl
+            .fromTo('nav ul', 0, {right : "0%", opacity: "1"}, {right : "-100%",opacity: "0"})
+            .fromTo('nav', 1, {display : "block"}, {display : "none"},"-=0")
+        });
     }
 
     function arrowNext(arrow){
