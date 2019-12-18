@@ -7,23 +7,23 @@
     <title>Cenya</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/swiper.min.css" rel="stylesheet">
-    <link href="css/lightbox.css" rel="stylesheet" >
+    <link href="css/magnific-popup.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    
     <script src="js/jquery.min.js"></script>
     <script src="js/swiper.min.js"></script>  
     <script src="js/TweenMax.min.js"></script>
     <script src="js/ScrollMagic.min.js"></script>
     <script src="js/animation.gsap.js"></script>
     <script src="js/debug.addIndicators.min.js"></script>
-    <script src="js/lightbox.js"></script>
+
+    <script src="js/magnific-popup.js"></script>
+
+
     <script src="js/main.js"></script>
-    
+   
   </head>
   <body>
-    <!-- <div class="loader fade">
-        <img src="images/splash.png">
-        <div class="title"></div>
-    </div> -->
     <div class="socialIcon">
         <ul>
             <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -70,63 +70,91 @@
               </ul>
             </nav>
             <div class="hamBurgerIcon greenColor">
-                <i class="fa fa-bars" aria-hidden="true"></i>
+                <i class="fa fa-list" aria-hidden="true"></i>
             </div>
         </header>
         <main class="w-100">
-          <div class="galleryWrap">
-            <div class="swiper-container gallery-top">
-              <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                      <a href="images/gallery/For all the women you are2-Femina.jpg" data-lightbox="example-set" data-title="My caption"><img class="example-image" src="images/gallery/For all the women you are2-Femina.jpg" alt=""/></a>
+            <div class="galleryWrap">
+                <div class="swiper-container gallery-top">
+                  <div class="swiper-wrapper popup-gallery">
+                      <div class="swiper-slide">
+                          <a class="image-link" href="images/gallery/portfolio-1.jpeg" title="Into The Blue">
+                            <img src="images/gallery/portfolio-1.jpeg" alt=""/>
+                            <span class="smallTitle">Lorem Ipsum</span>
+                          </a>
+                      </div>
+                      <div class="swiper-slide">
+                          <a class="image-link" href="images/gallery/portfolio-2.jpeg" title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "><img class="" src="images/gallery/portfolio-2.jpeg" alt=""/>
+                          <span class="smallTitle">Lorem Ipsum</span></a>
+                          
+                      </div>
+                      <div class="swiper-slide">
+                          <a class="video-link" href="http://127.0.0.1:5500/videos/dummy-video.mp4">
+                            <img class="" src="images/gallery/portfolio-3.jpeg" alt=""/>  
+                            <span class="smallTitle">Lorem Ipsum</span>
+                          </a>
+                      </div>
+                      <div class="swiper-slide">
+                          <a class="image-link" href="images/gallery/portfolio-4.jpeg" title="Into The Blue">
+                            <img src="images/gallery/portfolio-4.jpeg" alt=""/>
+                            <span class="smallTitle">Lorem Ipsum</span>
+                          </a>
+                      </div>
+                      <div class="swiper-slide">
+                          <a class="video-link" href="images/gallery/portfolio-5.jpeg">
+                            <img class="" src="images/gallery/portfolio-5.jpeg" alt=""/> 
+                            <span class="smallTitle">Lorem Ipsum</span> 
+                          </a>
+                      </div>
+                      <div class="swiper-slide">
+                          <a class="video-link" href="images/gallery/portfolio-6.jpeg">
+                            <img class="" src="images/gallery/portfolio-6.jpeg" alt=""/> 
+                            <span class="smallTitle">Lorem Ipsum</span> 
+                          </a>
+                      </div>
                   </div>
-                  <div class="swiper-slide">
-                      <a href="images/gallery/for-all-the-women-you-are.jpg" data-lightbox="example-set" data-title="My caption"><img class="example-image" src="images/gallery/for-all-the-women-you-are.jpg" alt=""/></a>
-                  </div>
-                  <!-- <div class="swiper-slide">
-                      <a href="images/gallery/dummy-video.mp4" data-lightbox="example-set" data-title="My caption"><video class="w-100" controls>
-                          <source src="videos/dummy-video.mp4" type="video/mp4">
-                          Your browser does not support the video tag.
-                      </video>  </a>
-                  </div> -->
-                  <div class="swiper-slide">
-                      <a href="images/gallery/For all the women you are2-Femina.jpg" data-lightbox="example-set" data-title="My caption"><img class="example-image" src="images/gallery/For all the women you are2-Femina.jpg" alt=""/></a>
-                  </div>
-                  <div class="swiper-slide">
-                      <a href="images/gallery/for-all-the-women-you-are.jpg" data-lightbox="example-set" data-title="My caption"><img class="example-image" src="images/gallery/for-all-the-women-you-are.jpg" alt=""/></a>
-                  </div>
-                  <div class="swiper-slide">
-                      <a href="images/gallery/get-inspired-femina.jpg" data-lightbox="example-set" data-title="My caption"><img class="example-image" src="images/gallery/get-inspired-femina.jpg" alt=""/></a>
-                  </div>
-              </div>
-            </div>
+                </div>
 
-            <div class="swiper-container gallery-thumbs" dir="rtl">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="images/gallery/For all the women you are2-Femina.jpg" data-lightbox="example-set" data-title="My caption"><img class="example-image" src="images/gallery/For all the women you are2-Femina.jpg" alt=""/></a>
+                <div class="swiper-container gallery-thumbs" dir="rtl">
+                    <div class="swiper-wrapper popup-gallery">
+                        <div class="swiper-slide">
+                            <a class="image-link" href="images/gallery/portfolio-1.jpeg" title="Into The Blue">
+                              <img src="images/gallery/portfolio-1.jpeg" alt=""/>
+                              <span class="smallTitle">Lorem Ipsum</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="image-link" href="images/gallery/portfolio-2.jpeg" title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "><img class="" src="images/gallery/portfolio-2.jpeg" alt=""/>
+                            <span class="smallTitle">Lorem Ipsum</span></a>
+                            
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="video-link" href="http://127.0.0.1:5500/videos/dummy-video.mp4">
+                              <img class="" src="images/gallery/portfolio-3.jpeg" alt=""/>  
+                              <span class="smallTitle">Lorem Ipsum</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="image-link" href="images/gallery/portfolio-4.jpeg" title="Into The Blue">
+                              <img src="images/gallery/portfolio-4.jpeg" alt=""/>
+                              <span class="smallTitle">Lorem Ipsum</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="video-link" href="images/gallery/portfolio-5.jpeg">
+                              <img class="" src="images/gallery/portfolio-5.jpeg" alt=""/> 
+                              <span class="smallTitle">Lorem Ipsum</span> 
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="video-link" href="images/gallery/portfolio-6.jpeg">
+                              <img class="" src="images/gallery/portfolio-6.jpeg" alt=""/> 
+                              <span class="smallTitle">Lorem Ipsum</span> 
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="swiper-slide">
-                    <a href="images/gallery/for-all-the-women-you-are.jpg" data-lightbox="example-set" data-title="My caption"><img class="example-image" src="images/gallery/for-all-the-women-you-are.jpg" alt=""/></a>
-                </div>
-                <!-- <div class="swiper-slide">
-                    <a href="images/gallery/dummy-video.mp4" data-lightbox="example-set" data-title="My caption"><video class="w-100" controls>
-                        <source src="videos/dummy-video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>  </a>
-                </div> -->
-                <div class="swiper-slide">
-                    <a href="images/gallery/For all the women you are2-Femina.jpg" data-lightbox="example-set" data-title="My caption"><img class="example-image" src="images/gallery/For all the women you are2-Femina.jpg" alt=""/></a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="images/gallery/for-all-the-women-you-are.jpg" data-lightbox="example-set" data-title="My caption"><img class="example-image" src="images/gallery/for-all-the-women-you-are.jpg" alt=""/></a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="images/gallery/get-inspired-femina.jpg" data-lightbox="example-set" data-title="My caption"><img class="example-image" src="images/gallery/get-inspired-femina.jpg" alt=""/></a>
-                </div>
-            </div>                    
             </div>
-          </div>
         </main>
         <footer>
             <p>&copy; Copyright Cenya 2019</p>
@@ -157,11 +185,36 @@
         });
         galleryTop.controller.control = galleryThumbs;
         galleryThumbs.controller.control = galleryTop;
-        lightbox.option({
-          'resizeDuration': 100,
-          'wrapAround': false,
-          "showImageNumberLabel": false
-        })
+
+        $(document).ready(function() {
+          $('.popup-gallery').magnificPopup({
+              delegate: 'a',
+              type: 'image',
+              tLoading: 'Loading image #%curr%...',
+              
+              gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0,1]
+              },
+              image: {
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                titleSrc: function(item) {
+                  return item.el.attr('title');
+                }
+              },
+              callbacks: {
+                elementParse: function(item) {
+              if(item.el[0].className == 'video-link') {
+                item.type = 'iframe';
+              } else {
+                item.type = 'image';
+              }
+                  }
+                },
+          });
+      });
+        
     </script>
     
   </body>
