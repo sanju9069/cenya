@@ -205,10 +205,12 @@ main video:hover~.aboutUsContent{opacity: 1;}
 /* navbar menu */
 nav{font-family: 'TheBoldFont';overflow: hidden;width: 70%;display : none}
 nav ul{display: flex;justify-content: space-between;position: relative;right: 0;}
-nav ul li{display: inline-block;font-size: 1.7rem;}
+nav ul li{display: inline-block;font-size: 1.7rem;padding: 15px;}
 nav ul li a{color: #b1f932;text-decoration: none;}
 nav ul li a:hover{color: #e234bc;}
-.activeNav a{position: relative;color: #e234bc;}
+.activeNav a{position: relative;color: #b1f932 !important;opacity: .7;}
+.activeNav{background: url(../images/glow-layer.png);background-size: 100% 100%;}
+
 .activeNav a::before{content: '';box-shadow: 1px 1px 20px #FFF;}
 
 
