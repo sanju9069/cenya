@@ -29,6 +29,8 @@
             <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
             <li><a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
             <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="contact-us.html" target="_blank"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
+            <li><a href="contact-us.html" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
         </ul>
     </div>
     <div class="menuDiv">
@@ -78,6 +80,24 @@
                 <div class="swiper-container gallery-top">
                   <div class="swiper-wrapper popup-gallery">
                       <div class="swiper-slide">
+                          <a class="pdf-link" href="images/gallery/Deepak-Jalhan-Femina-Spa-n-Salon-1.pdf" title="Into The Blue">
+                            <embed src="images/gallery/Deepak-Jalhan-Femina-Spa-n-Salon-1.pdf" class="w-100" type="application/pdf">
+                            <!-- <span class="smallTitle">Lorem Ipsum</span> -->
+                          </a>
+                      </div>
+                      <div class="swiper-slide">
+                          <a class="pdf-link" href="images/gallery/Deepak-Jalhan-Femina-Spa-n-Salon-2.pdf" title="Into The Blue">
+                            <embed src="images/gallery/Deepak-Jalhan-Femina-Spa-n-Salon-2.pdf" class="w-100" type="application/pdf">
+                            <!-- <span class="smallTitle">Lorem Ipsum</span> -->
+                          </a>
+                      </div>
+                      <div class="swiper-slide">
+                          <a class="pdf-link" href="images/gallery/Shy-Kalra-Femina.pdf" title="Into The Blue">
+                            <embed src="images/gallery/Shy-Kalra-Femina.pdf" class="w-100" type="application/pdf">
+                            <!-- <span class="smallTitle">Lorem Ipsum</span> -->
+                          </a>
+                      </div>
+                      <div class="swiper-slide">
                           <a class="image-link" href="images/gallery/portfolio-1.jpeg" title="Into The Blue">
                             <img src="images/gallery/portfolio-1.jpeg" alt=""/>
                             <span class="smallTitle">Lorem Ipsum</span>
@@ -95,9 +115,9 @@
                           </a>
                       </div>
                       <div class="swiper-slide">
-                          <a class="image-link" href="images/gallery/portfolio-4.jpeg" title="Into The Blue">
-                            <img src="images/gallery/portfolio-4.jpeg" alt=""/>
-                            <span class="smallTitle">Lorem Ipsum</span>
+                          <a class="pdf-link" href="images/gallery/brastory-Marie-Claire.pdf" title="Into The Blue">
+                            <embed src="images/gallery/brastory-Marie-Claire.pdf" class="w-100" type="application/pdf">
+                            <!-- <span class="smallTitle">Lorem Ipsum</span> -->
                           </a>
                       </div>
                       <div class="swiper-slide">
@@ -221,13 +241,15 @@
             },
             callbacks: {
               elementParse: function(item) {
-            if(item.el[0].className == 'video-link') {
-              item.type = 'iframe';
-            } else {
-              item.type = 'image';
-            }
+                if(item.el[0].className == 'video-link') {
+                  item.type = 'iframe';
+                } else if(item.el[0].className == 'pdf-link'){
+                  item.type = 'iframe';
+                }else {
+                  item.type = 'image';
                 }
-              },
+             }
+            },
         });
       });
      

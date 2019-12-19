@@ -55,10 +55,10 @@ main{height:100vh}
 .singleMenu div{height: 100%;align-items: center;display: flex;justify-content: center;font-size: 3rem;letter-spacing: 5px;text-transform: uppercase;font-family: APompadourBoldSample;background: #000;position: relative;width: 100%;}
 .singleMenu a{text-decoration: none;color: #b0f831;display: inline-block;position: relative;overflow: hidden;}
 .singleMenu a::before{content: '';position: absolute;height: 5px;width: 100%;bottom: 0px;left: 0;background: #b0f831;z-index: 1;transition: 0.6s;}
-.singleMenu a::after{content: '';position: absolute;height: 3px;width: 100%;bottom: 0px;left: -100%;background: pink;z-index: 1;transition: 0.6s;}
+.singleMenu a::after{content: '';position: absolute;height: 3px;width: 100%;bottom: 0px;left: -100%;background: #e234bc;z-index: 1;transition: 0.6s;}
 .singleMenu:hover a::before{left: 100%;}
 .singleMenu:hover a::after{left: 0%;}
-.singleMenu a:hover{color: pink;}
+.singleMenu a:hover{color: #e234bc;}
 
 
 .menuDiv ul{width: 100%;}
@@ -189,7 +189,7 @@ footer ul>li>a{font-size: .7rem;color: #b0f831;text-decoration: none;} */
 .socialIcon{position: fixed;right: 1%;top: 50%;transform: translateY(-50%);z-index: 9999;}
 .socialIcon>ul{}
 .socialIcon>ul>li{list-style-type: none;text-align: center;padding: .5rem;}
-.socialIcon>ul>li>a{color: #000;display: inline-block;font-size: 1.2rem;text-align: center;width: 30px;height: 30px;border-radius: 50%;background: #2ed5a9;padding: 5px 7px;}
+.socialIcon>ul>li>a{color: #000;display: inline-block;font-size: 1.2rem;text-align: center;width: 30px;height: 30px;border-radius: 50%;background: #2ed5a9;padding: 5px 0;}
 
 
 /* about us page */
