@@ -168,7 +168,7 @@ header{position:fixed;width:100%;background:transparent;top:0;left:0;display:fle
 .height50{height: 50%;}
 .flexContent{justify-self: center;align-content: center;color: #FFF;padding: 2rem 3rem;font-size: 1rem;flex-wrap: wrap;text-align: center;align-self: center}
 .flexContent p{font-family: 'APompadourSample';font-size: 1.2rem;line-height: 1.4;}
-.blogInnerTitle, .flexContent h2{font-family: 'CoolveticaRg-Regular';text-align: center;width: 100%;font-size: 2.5rem;text-transform: uppercase;margin-bottom: 1rem;letter-spacing: 4px;}
+.blogInnerTitle, .flexContent h2{font-family: 'CoolveticaRg-Regular';text-align: center;width: 100%;font-size: 2.5rem;text-transform: uppercase;margin-bottom: 1rem;letter-spacing: 3px;}
 .flexContent h2{text-align: left;}
 .leftTextConetnt{text-align: right;}
 .leftTextConetnt h2{font-family: 'APompadourSample';margin-bottom: 0;font-size: 1.2rem;text-align: right;}
@@ -189,13 +189,12 @@ footer ul>li>a{font-size: .7rem;color: #b0f831;text-decoration: none;} */
 
 /* social icons */
 .socialIcon{position: fixed;right: 1%;top: 50%;transform: translateY(-50%);z-index: 9999;}
-.socialIcon>ul{}
 .socialIcon>ul>li{list-style-type: none;text-align: center;padding: .5rem;}
 .socialIcon>ul>li>a{color: #000;display: inline-block;font-size: 1.2rem;text-align: center;width: 30px;height: 30px;border-radius: 50%;background: #2ed5a9;padding: 5px 0;}
 
 
 /* about us page */
-.videoWrap{position: fixed;top: 0%;left: 0;width: 100%;height: 95%;outline: none;) no-repeat;background-size: cover;}
+.videoWrap{position: fixed;top: 0%;left: 0;width: 100%;height: 95%;outline: none;}
 /* position: fixed;top: 0;left: 0;background: url(../images/video-thumbnail.jpeg) no-repeat;background-size: cover; */
 .aboutHeader{position: absolute;z-index: 4;top: 30%;left: 50%;font-size: 3.5rem;font-family: 'TheBoldFont';transform: translateX(-50%);color: #b0f831;letter-spacing: 5px;}
 .playButton{position: absolute;z-index: 4;top: 50%;left: 50%;font-size: 2.5rem;font-family: 'TheBoldFont';transform: translate(-50%, -50%);color: #b0f831;}
@@ -212,9 +211,10 @@ nav ul li{display: inline-block;font-size: 1.7rem;padding: 15px;}
 nav ul li a{color: #b1f932;text-decoration: none;}
 nav ul li a:hover{color: #e234bc;}
 .activeNav a{position: relative;color: #b1f932 !important;opacity: .9;padding-bottom: 2px;padding-left: 10px;padding-right: 10px;}
-.activeNav{background: url(../images/glow-layer.png);background-size: 100% 100%;}
+/* .activeNav{background: url(../images/glow-layer.png);background-size: 100% 100%;} */
 .activeNav a svg {height: 100%;left: 0;position: absolute;top: 0;width: 100%;}
 .activeNav a rect {fill: none;stroke: #b1f932;animation: aboutAnimater  infinite 1.8s linear;}
+.aboutSpan{position: absolute;top: -15px;font-size: 10px;left: 0;width: 100%;text-align: center;}
 
 
 @keyframes aboutAnimater{
