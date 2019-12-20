@@ -89,6 +89,13 @@ $(document).ready(function(){
         $(".playButton").html(`<span><i class="fa fa-pause" id="pauseButton" aria-hidden="true"></i></span>`)
         $('.aboutHeader').fadeOut()
         $('.aboutUsContent').hide()
+        $(".playButton").hide()
+    });
+    $( "video" ).mousemove(function( event ) {
+        $(".playButton").show()
+        setTimeout(function(){ 
+            $(".playButton").hide()
+         }, 3000);
     });
     
 
