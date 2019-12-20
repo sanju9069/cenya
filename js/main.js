@@ -52,7 +52,7 @@ $(document).ready(function(){
             tl.fromTo('nav', 0, {display : "none"}, {display : "block", ease: Power2.easeInOut})
             .fromTo('nav ul', 1, {right : "-100%", opacity: "0"}, {right : "0%",opacity: "1"},"-=0")
         });   
-       $("main").mouseenter(function(){
+        $("main").mouseenter(function(){
             tl
             .fromTo('nav ul', 0, {right : "0%", opacity: "1"}, {right : "-100%",opacity: "0"})
             .fromTo('nav', 1, {display : "block"}, {display : "none"},"-=0")
@@ -88,32 +88,36 @@ $(document).ready(function(){
         vid.play();
         $(".playButton").html(`<span><i class="fa fa-pause" id="pauseButton" aria-hidden="true"></i></span>`)
         $('.aboutHeader').fadeOut()
+        $('.aboutUsContent').hide()
     });
     
 
     $("body").on("click", "#pauseButton", function(){
         vid.pause();
+        $('.aboutUsContent').show()
         $(".playButton").html(`<span><i class="fa fa-play" id="playButton" aria-hidden="true"></i></span>`)
     });
 
     
 
-    $(".hamBurgerIcon").click(function(){
-        tl.fromTo('.menuDiv', 0, {  display: 'none'}, { display: 'flex'})
-        .fromTo($('.singleMenu1>div'), 0.3, {left: "-100%", width:"0"}, { left: "0%", width:"100%"},'-=0')
-        .fromTo($('.singleMenu2>div'), 0.6, {left: "-100%", width:"0"}, { left: "0%", width:"100%"},'-=0.3')
-        .fromTo($('.singleMenu3>div'), 0.9, {left: "-100%", width:"0"}, { left: "0%", width:"100%"},'-=0.6')
-        .fromTo($('.closeBtn'), 2, {display: "none"}, { display: "block"})
-    });
-    $('.closeBtn').click(function(){
-        tl
-        .fromTo($('.singleMenu1>div'), 0.3, {left: "0%", width:"100%"}, { left: "100%", width:"0%"},'-=0')
-        .fromTo($('.singleMenu2>div'), 0.6, {left: "0%", width:"100%"}, { left: "100%", width:"0%"},'-=0.3')
-        .fromTo($('.singleMenu3>div'), 0.9, {left: "0%", width:"100%"}, { left: "100%", width:"0%"},'-=0.6')
-        .fromTo($('.closeBtn'), 0, {display: "block"}, { display: "none"}, '-=0.9')
-        .fromTo('.menuDiv', 1.5, {  display: 'flex'}, { display: 'none'}, "-=1.2")
         
-    });
+
+    // $(".hamBurgerIcon").click(function(){
+    //     tl.fromTo('.menuDiv', 0, {  display: 'none'}, { display: 'flex'})
+    //     .fromTo($('.singleMenu1>div'), 0.3, {left: "-100%", width:"0"}, { left: "0%", width:"100%"},'-=0')
+    //     .fromTo($('.singleMenu2>div'), 0.6, {left: "-100%", width:"0"}, { left: "0%", width:"100%"},'-=0.3')
+    //     .fromTo($('.singleMenu3>div'), 0.9, {left: "-100%", width:"0"}, { left: "0%", width:"100%"},'-=0.6')
+    //     .fromTo($('.closeBtn'), 2, {display: "none"}, { display: "block"})
+    // });
+    // $('.closeBtn').click(function(){
+    //     tl
+    //     .fromTo($('.singleMenu1>div'), 0.3, {left: "0%", width:"100%"}, { left: "100%", width:"0%"},'-=0')
+    //     .fromTo($('.singleMenu2>div'), 0.6, {left: "0%", width:"100%"}, { left: "100%", width:"0%"},'-=0.3')
+    //     .fromTo($('.singleMenu3>div'), 0.9, {left: "0%", width:"100%"}, { left: "100%", width:"0%"},'-=0.6')
+    //     .fromTo($('.closeBtn'), 0, {display: "block"}, { display: "none"}, '-=0.9')
+    //     .fromTo('.menuDiv', 1.5, {  display: 'flex'}, { display: 'none'}, "-=1.2")
+        
+    // });
 
     const slideLength  = $('.slideImage');
     slideLength.map((index) =>
