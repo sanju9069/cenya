@@ -232,7 +232,7 @@ nav ul li a:hover{color: #e234bc;}
 
 
 /* Small devices (landscape phones, 576px and up) */
-@media (max-width: 576px) { 
+@media (max-width: 767px) { 
     .sm-flex-wrap{flex-wrap: wrap;}
     .slideImage{flex: 0 0 100%;width: 100%;max-width: 100%;}
     .slideImage:nth-of-type(even) .contentDiv, .slideImage:nth-of-type(odd) .contentDiv{bottom:15%;}
@@ -272,6 +272,8 @@ nav ul li a:hover{color: #e234bc;}
     nav ul li:last-child{border-bottom: none;}
     .phoneOnly{display: block;}
     .activeNav a{padding-top: 4px;}
+    .mfp-bottom-bar {position: relative}
+    .mfp-title{padding-right: 0px;}
 }
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) {
