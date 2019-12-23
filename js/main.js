@@ -138,21 +138,3 @@ $(document).ready(function(){
 });
 
 
-
-
-
-
-  
-// $(window).resize(function(){
-
-//   ww = window.innerWidth;
-//   slideContainerWidth = slideWidth*noSlides-ww;
-
-  
-//   horizontal.destroy(true);
-//   horizontal = createHorizontal();
-
-// });
-  
-
-

@@ -9,38 +9,6 @@
     <link href="css/swiper.min.css" rel="stylesheet">
     <link href="css/magnific-popup.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    
-    <script src="js/jquery.min.js"></script>
-    <script src="js/swiper.min.js"></script>  
-    <script src="js/TweenMax.min.js"></script>
-    <script src="js/ScrollMagic.min.js"></script>
-    <script src="js/animation.gsap.js"></script>
-    <script src="js/debug.addIndicators.min.js"></script>
-
-    <script src="js/magnific-popup.js"></script>
-
-
-    <script src="js/main.js"></script>
-    <script>
-        $(document).ready(function(){
-            var tl = new TimelineMax();
-            if ($(window).width() < 767) {
-                    console.log('Mobile Device');
-                }
-                else {
-                $(".hamBurgerIcon").mouseenter(function(){
-                    tl.fromTo('nav', 0, {display : "none"}, {display : "block", ease: Power2.easeInOut})
-                    .fromTo('nav ul', 1, {right : "-100%", opacity: "0"}, {right : "0%",opacity: "1"},"-=0")
-                });   
-                $("main").mouseenter(function(){
-                    tl
-                    .fromTo('nav ul', 0, {right : "0%", opacity: "1"}, {right : "-100%",opacity: "0"})
-                    .fromTo('nav', 1, {display : "block"}, {display : "none"},"-=0")
-                });
-            }
-        });
-    </script>
-   
   </head>
   <body>
     <div class="socialIcon">
@@ -61,7 +29,7 @@
             <li class="phoneOnly"><a href="mailto:info@cenyainc.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
         </ul>
     </div>
-    <div class="menuDiv">
+    <!-- <div class="menuDiv">
         <div class="closeBtn">
             <span></span>
             <span></span>
@@ -81,12 +49,7 @@
                 <a href="contact-us.html">Contact Us</a>
             </div>
         </div>
-        <!-- <ul>
-            <li><a href="about-us.html">About Us</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact-us.html">Contact Us</a></li>
-        </ul> -->
-    </div>
+    </div> -->
   
     <div class="wrapper">
         <header>
@@ -218,79 +181,89 @@
         </footer>
     </div>
 
-    
-    
-    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>  
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/ScrollMagic.min.js"></script>
+    <script src="js/animation.gsap.js"></script>
+    <script src="js/debug.addIndicators.min.js"></script>
+    <script src="js/magnific-popup.js"></script>
+    <script src="js/main.js"></script>
     <script>
-      $(document).ready(function(){
-        
-        if ($(window).width() < 767) {
-          var galleryThumbs = new Swiper('.gallery-thumbs', {
-              init: false,
-          });
-          var galleryTop = new Swiper('.gallery-top', {
-              init: false,
-          });
-        }
-        else{
-          var galleryThumbs = new Swiper('.gallery-thumbs', {
-              spaceBetween: 30,
-              slidesPerView: 4,
-              loop: true,
-              init: true,
-              freeMode: true,
-              centeredSlides: true,
-              mousewheel: true,
-          });
-          var galleryTop = new Swiper('.gallery-top', {
-              spaceBetween: 30,
-              slidesPerView: 4,
-              loop: true,
-              init: true,
-              freeMode: true,
-              mousewheel: true,
-              keyboard: {
-              enabled: true,
+        $(document).ready(function(){
+            var tl = new TimelineMax();
+            if ($(window).width() < 767) {
+                var galleryThumbs = new Swiper('.gallery-thumbs', {
+                    init: false,
+                });
+                var galleryTop = new Swiper('.gallery-top', {
+                    init: false,
+                });
               }
-          });
-        }
-        
-        
-        galleryTop.controller.control = galleryThumbs;
-        galleryThumbs.controller.control = galleryTop;
+              else {
+                $(".hamBurgerIcon").mouseenter(function(){
+                    tl.fromTo('nav', 0, {display : "none"}, {display : "block", ease: Power2.easeInOut})
+                    .fromTo('nav ul', 1, {right : "-100%", opacity: "0"}, {right : "0%",opacity: "1"},"-=0")
+                });   
+                $("main").mouseenter(function(){
+                    tl
+                    .fromTo('nav ul', 0, {right : "0%", opacity: "1"}, {right : "-100%",opacity: "0"})
+                    .fromTo('nav', 1, {display : "block"}, {display : "none"},"-=0")
+                });
+                var galleryThumbs = new Swiper('.gallery-thumbs', {
+                    spaceBetween: 30,
+                    slidesPerView: 4,
+                    loop: true,
+                    init: true,
+                    freeMode: true,
+                    centeredSlides: true,
+                    mousewheel: true,
+                });
+                var galleryTop = new Swiper('.gallery-top', {
+                    spaceBetween: 30,
+                    slidesPerView: 4,
+                    loop: true,
+                    init: true,
+                    freeMode: true,
+                    mousewheel: true,
+                    keyboard: {
+                    enabled: true,
+                    }
+                });
+            }
+           
+            galleryTop.controller.control = galleryThumbs;
+            galleryThumbs.controller.control = galleryTop;
 
-    
-        $('.popup-gallery').magnificPopup({
-            delegate: 'a',
-            type: 'image',
-            tLoading: 'Loading image #%curr%...',
-            
-            gallery: {
-              enabled: true,
-              navigateByImgClick: true,
-              preload: [0,1]
-            },
-            image: {
-              tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-              titleSrc: function(item) {
-                return item.el.attr('title');
-              }
-            },
-            callbacks: {
-              elementParse: function(item) {
-                if(item.el[0].className == 'video-link') {
-                  item.type = 'iframe';
-                } else if(item.el[0].className == 'pdf-link'){
-                  item.type = 'iframe';
-                }else {
-                  item.type = 'image';
+            $('.popup-gallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                tLoading: 'Loading image #%curr%...',
+                
+                gallery: {
+                  enabled: true,
+                  navigateByImgClick: true,
+                  preload: [0,1]
+                },
+                image: {
+                  tError: '<a href="%url%">The content #%curr%</a> could not be loaded.',
+                  titleSrc: function(item) {
+                    return item.el.attr('title');
+                  }
+                },
+                callbacks: {
+                  elementParse: function(item) {
+                    if(item.el[0].className == 'video-link') {
+                      item.type = 'iframe';
+                    } else if(item.el[0].className == 'pdf-link'){
+                      item.type = 'iframe';
+                    }else {
+                      item.type = 'image';
+                    }
                 }
-             }
-            },
+                },
+            });
         });
-      });
-     
-        
     </script>
     
   </body>
