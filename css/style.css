@@ -271,7 +271,7 @@ nav ul li a:hover{color: #e234bc;}
     nav ul li{width: 100%;text-align: center;border-bottom: solid 2px #b1f932;margin-top: 1rem;    font-size: 1.2rem;}
     nav ul li:last-child{border-bottom: none;}
     .phoneOnly{display: block;}
-    .activeNav a{padding-top: 2px;}
+    .activeNav a{padding-top: 4px;}
 }
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) {
