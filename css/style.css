@@ -213,12 +213,13 @@ nav ul{display: flex;justify-content: space-between;position: relative;right: 0;
 nav ul li{display: inline-block;font-size: 1.7rem;padding: 15px;}
 nav ul li a{color: #b1f932;text-decoration: none;}
 nav ul li a:hover{color: #e234bc;}
-.activeNav a{position: relative;color: #b1f932 !important;opacity: .9;padding-bottom: 2px;padding-left: 10px;padding-right: 10px;}
+.activeNav a{position: relative;opacity: .9;padding-bottom: 2px;padding-left: 10px;padding-right: 10px;}
 /* .activeNav{background: url(../images/glow-layer.png);background-size: 100% 100%;} */
 .activeNav a svg {height: 100%;left: 0;position: absolute;top: 0;width: 100%;}
 .activeNav a rect {fill: none;stroke: #b1f932;animation: aboutAnimater  infinite 1.8s linear;}
 .aboutSpan{position: absolute;top: -15px;font-size: 10px;left: 0;width: 100%;text-align: center;}
 .phoneOnly{display: none;}
+nav ul li a:hover rect{stroke: #e234bc;}
 
 
 @keyframes aboutAnimater{
@@ -261,7 +262,7 @@ nav ul li a:hover{color: #e234bc;}
     .arrowsWrap, .playButton, .scrollForward, .desktopOnly{display: none}
     .singleMenu {width: 100%;flex: 0 0 100%;height: 33.33%;}
     .menuDiv{flex-wrap: wrap;}
-    .videoWrap{position: relative;height: 95vh;}
+    .videoWrap{position: relative;height: 60vh;}
     .aboutUsContent{position: relative;padding: 1rem;}
     .aboutHeader{top: 15%;}
     .swiper-wrapper{flex-wrap: wrap;}
@@ -274,6 +275,7 @@ nav ul li a:hover{color: #e234bc;}
     .activeNav a{padding-top: 4px;}
     .mfp-bottom-bar {position: relative}
     .mfp-title{padding-right: 0px;}
+    header {position: absolute;}
 }
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) {
