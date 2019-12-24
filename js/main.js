@@ -67,7 +67,8 @@ $(document).ready(function(){
     function arrowNext(arrow){
         lengthofSlide += 400
         if(lengthofSlide >= slideContainerWidth){
-            tl.to(".slideContainer", 1, {x: 0})
+            lengthofSlide = 0
+            tl.to(".slideContainer", 1, {x: lengthofSlide})
         }
         else{
             tl.to(".slideContainer", 1, {x: -lengthofSlide})
