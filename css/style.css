@@ -185,7 +185,9 @@ footer ul>li>a{font-size: .7rem;color: #b0f831;text-decoration: none;} */
 .arrowsWrap span:hover{background: #b0f831;color: #000;}
 .arrowsWrap span:hover i{transform: rotate(360deg);}
 .scrollForward{color: #b0f831;position: absolute;top: 0;right: 2%;}
-
+.tnCPriv{padding: 0 3px;}
+.tnCPriv a{font-family: 'APompadourSample';color: #ccc;text-decoration: none;}
+.tnCPriv a:hover{color: #b0f831;}
 
 /* social icons */
 .socialIcon{position: fixed;right: 1%;top: 50%;transform: translateY(-50%);z-index: 9999;}
