@@ -112,6 +112,19 @@ $(document).ready(function(){
     });
 
     
+    $(".overLay").click(function(){
+        $(this).hide();
+        $(".thankYouPop").hide();
+    });
+
+    $(".submitBtn").click(function(e){
+        e.preventDefault()
+        $(".overLay").show();
+        $(".thankYouPop").show();
+    });
+    
+
+    
 
         
 
