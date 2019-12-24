@@ -78,9 +78,9 @@ main{height:100vh}
 
 /* Loader */
 .overLay{position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 9;background: -webkit-linear-gradient(40deg, #592c6d 10%, #053645);background: -moz-linear-gradient(40deg, #592c6d 10%, #053645);background: -o-linear-gradient(40deg, #592c6d 10%, #053645);background: linear-gradient(40deg, #592c6d 10%, #053645);display: none;}
-.thankYouPop{position: fixed;top: 50%;left: 50%;z-index: 9;transform: translate(-50%, -50%);text-align: center;color: #b0f831;font-family: 'CoolveticaRg-Regular';letter-spacing: 3px;display: none;}
-.thankYouPop h1{font-size: 5rem;}
-.thankYouPop p{font-size: 3rem;}
+.thankYouPop{position: fixed;top: 50%;left: 50%;z-index: 9;transform: translate(-50%, -50%);text-align: center;color: #b0f831;font-family: 'CoolveticaRg-Regular';letter-spacing: 3px;display: none;width: 60%;}
+.thankYouPop h1{font-size: 3.5rem;}
+.thankYouPop p{font-size: 2rem;}
 /* .loader{position: fixed;z-index: 4;top: 50%;left: 50%;transform: translate(-50%);} */
 
 /* .loader{height: 100vh;width: 100%;background: #000;position: fixed;top: 0;left: 0;z-index: 9;} */
