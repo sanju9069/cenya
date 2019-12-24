@@ -185,7 +185,7 @@ footer{position: fixed;bottom: 0;left: 0;width: 100%;display: flex;justify-conte
 footer p{font-size: .7rem;color: #ccc;}
 /* footer ul>li{list-style-type: none;display: inline-block;padding-left: 1rem;}
 footer ul>li>a{font-size: .7rem;color: #b0f831;text-decoration: none;} */
-.arrowsWrap{position: fixed;z-index: 5;bottom: 1%;color: #FFF;display: flex;width: 100%;justify-content: flex-end;padding: 1rem;}
+.arrowsWrap{position: fixed;z-index: 5;bottom: 1%;color: #FFF;display: flex;width: 60%;justify-content: flex-end;padding: 1rem;right: 0;}
 .arrowsWrap span{background: rgba(0, 0, 0, 0.70);color: #b0f831;width: 45px;height: 45px;border-radius: 50%;display: block;vertical-align: middle;font-size: 1.8rem;text-align: center;padding-top: 7px;cursor: pointer;}
 .arrowsWrap span i{transition: 0.6s;transform: rotate(0deg);}
 .arrowsWrap span:hover{background: #b0f831;color: #000;}
