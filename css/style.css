@@ -287,6 +287,7 @@ nav ul li a:hover rect{stroke: #e234bc;}
     .thankYouPop{width: 100%;}
     .thankYouPop h1{font-size: 3rem;}
     .thankYouPop p{font-size: 1.3rem;}
+    .flexReverse{display: flex;flex-wrap: wrap;flex-direction: column-reverse;}
 }
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) {
