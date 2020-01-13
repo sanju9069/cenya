@@ -111,6 +111,15 @@ $(document).ready(function(){
         $(".playButton").html(`<span><i class="fa fa-play" id="playButton" aria-hidden="true"></i></span>`)
     });
 
+   vid.onpause = function() {
+        $('.aboutUsContent').show()
+        $(".playButton").html(`<span><i class="fa fa-play" id="playButton" aria-hidden="true"></i></span>`)
+    };
+    vid.onplay = function() {
+        $('.aboutUsContent').hide()
+        $('.aboutHeader').fadeOut()
+        $(".playButton").html(`<span><i class="fa fa-pause" id="pauseButton" aria-hidden="true"></i></span>`)
+    };
     
     $(".overLay").click(function(){
         $(this).hide();
