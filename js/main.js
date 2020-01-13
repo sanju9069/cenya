@@ -6,7 +6,7 @@ $(document).ready(function(){
     var controller = new ScrollMagic.Controller();
     var tl = new TimelineMax();
 
-    var ww = window.innerWidth;
+    var ww =  $(window).innerWidth();
 
     var noSlides, slideWidth, slideContainerWidth;
     noSlides = $(".commonSlide").length;
@@ -16,7 +16,7 @@ $(document).ready(function(){
         slideWidth = $(this).outerWidth();
         num += slideWidth
     });
-    var slideContainerWidth = num-ww;
+    slideContainerWidth = num-ww;
 
     function createHorizontal() {
         return new ScrollMagic.Scene({
